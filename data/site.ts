@@ -44,6 +44,34 @@ export const openSourceProjects = [
   },
 ];
 
+export const owners = [
+  {
+    name: "Sol Soletti",
+    role: "Co-founder, Anchorage Labs",
+    location: "Rosario, Santa Fe, Argentina",
+    github: "https://github.com/solsolettidev",
+    linkedin: "https://www.linkedin.com/in/solsoletti/",
+    avatar: "https://avatars.githubusercontent.com/u/272352439?v=4",
+    focus: "Developer tools, backend systems, Go, TypeScript, and product execution for developer-first software.",
+    summary:
+      "Sol is a co-founder of Anchorage Labs and helps shape the organization around practical developer tooling, open source products, and technically clear software systems. Public GitHub activity confirms work across TypeScript and Go, including development-environment and microservices-oriented projects.",
+    signals: ["Anchorage Labs co-founder", "TypeScript", "Go", "Developer tooling", "Backend systems"],
+  },
+  {
+    name: "Valentin Torassa Colombero",
+    role: "Co-founder, Anchorage Labs",
+    location: "Argentina",
+    github: "https://github.com/ValentinTorassa",
+    linkedin: "https://www.linkedin.com/in/valetorassa/",
+    avatar: "https://avatars.githubusercontent.com/u/141514714?v=4",
+    focus:
+      "Infrastructure, automation, backend platforms, security tooling, Linux systems, containers, and AI-assisted developer workflows.",
+    summary:
+      "Valentin is a co-founder of Anchorage Labs with public work spanning Python, TypeScript, Go, C#, Shell, PowerShell, Linux, Podman, MCP, automation, self-hosted tooling, and infrastructure experiments. His public repositories show a strong bias toward systems, operations, security, and developer workflow automation.",
+    signals: ["Anchorage Labs co-founder", "Infrastructure", "Automation", "Python", "TypeScript", "Linux", "Containers"],
+  },
+];
+
 export const internalSystems = [
   {
     name: "anchorage",

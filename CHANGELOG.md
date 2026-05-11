@@ -29,6 +29,21 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 
 ## [unreleased]
 
+### 2026-05-11 — Add owner profiles to the Anchorage Labs portfolio
+
+**Intent:** Add owner profiles to the Anchorage Labs portfolio
+
+**Files touched:**
+- app/page.tsx
+- components/owners-section.tsx
+- data/site.ts
+- CHANGELOG.md
+
+**Reason:** User request to include Sol Soletti and Valentin Torassa Colombero owner summaries from public profiles
+
+**Author:** Sol Soletti
+
+
 ### 2026-05-11 — Establish the Anchorage Labs portfolio landing with repository bootstrap discipline
 
 **Intent:** Establish the Anchorage Labs portfolio landing with repository bootstrap discipline

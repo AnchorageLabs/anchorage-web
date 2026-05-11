@@ -1,12 +1,13 @@
 import { CodeShowcase } from "@/components/code-showcase";
 import { Footer } from "@/components/footer";
 import { HeroVisual } from "@/components/hero-visual";
+import { OwnersSection } from "@/components/owners-section";
 import { ProjectCard } from "@/components/project-card";
 import { Section } from "@/components/section";
 import { TerminalPanel } from "@/components/terminal-panel";
 import { analysisSummary, internalSystems, openSourceProjects, organization, stack } from "@/data/site";
 
-const nav = ["About", "Open Source", "Code", "Systems", "Stack"];
+const nav = ["About", "Owners", "Open Source", "Code", "Systems", "Stack"];
 
 export default function Home() {
   return (
@@ -65,6 +66,10 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </Section>
+
+      <Section id="owners" eyebrow="Owners" title="Founder-led by builders with systems instincts." intro="Anchorage Labs is led by Sol Soletti and Valentin Torassa Colombero. Their public work points toward the same center of gravity as the organization: developer tools, backend systems, infrastructure, automation, and practical open source software.">
+        <OwnersSection />
       </Section>
 
       <Section id="open-source" eyebrow="Open Source" title="Tools in progress for developers and maintainers." intro="The public portfolio is early, technical, and intentionally focused: automation protocols, contributor onboarding, changelog discipline, and portable development environments.">
