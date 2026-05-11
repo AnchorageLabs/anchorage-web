@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings",
+  "_comment": "AnchorageLabs build-discipline plugin. Lives in the sibling anchorage-internal repo and propagates via git pull. See anchorage-internal/anchorage-build/README.md.",
+  "plugins": {
+    "anchorage-build": {
+      "path": "/home/anchorage_labs/anchorage-internal/anchorage-build/claude"
+    }
+  }
+}

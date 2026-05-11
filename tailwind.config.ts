@@ -1,0 +1,34 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./data/**/*.{ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        navy: {
+          950: "#020817",
+          900: "#061323",
+          800: "#0a1b31",
+          700: "#102845",
+        },
+        signal: {
+          cyan: "#2ee9ff",
+          blue: "#4d8dff",
+          violet: "#8d5cff",
+          green: "#5cffb1",
+        },
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+        mono: ["var(--font-jetbrains)", "JetBrains Mono", "monospace"],
+      },
+      boxShadow: {
+        glow: "0 0 80px rgba(46, 233, 255, 0.16)",
+        card: "0 24px 80px rgba(0, 0, 0, 0.35)",
+      },
+    },
+  },
+  plugins: [require("@tailwindcss/typography")],
+};
+
+export default config;

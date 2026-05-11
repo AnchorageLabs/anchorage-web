@@ -1,0 +1,32 @@
+# .codex/config.toml — AnchorageLabs build-discipline (Codex side)
+#
+# Companion to .claude/settings.local.json. Same hooks, same scripts — different agent.
+# See /home/anchorage_labs/anchorage-internal/anchorage-build/README.md.
+
+[features]
+codex_hooks = true
+
+# Wire the same pre-edit / post-edit handlers Claude uses.
+# Codex shares the JSON payload shape and exit-code semantics with Claude Code,
+# so the bin/hook-*.sh scripts are reused verbatim.
+
+[[hooks.PreToolUse]]
+matcher = "^(apply_patch|Edit|Write|MultiEdit)$"
+
+  [[hooks.PreToolUse.hooks]]
+  type = "command"
+  command = "/home/anchorage_labs/anchorage-internal/anchorage-build/bin/hook-pre-edit.sh"
+  timeout = 30
+
+[[hooks.PostToolUse]]
+matcher = "^(apply_patch|Edit|Write|MultiEdit)$"
+
+  [[hooks.PostToolUse.hooks]]
+  type = "command"
+  command = "/home/anchorage_labs/anchorage-internal/anchorage-build/bin/hook-post-edit.sh"
+  timeout = 10
+
+# Per-project trust — Codex requires this on first run for non-interactive auth.
+# Replace the path below with the absolute path to this repo on your machine.
+# [projects."/absolute/path/to/anchorage-labs-web"]
+# trust_level = "trusted"
