@@ -29,6 +29,28 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 
 ## [unreleased]
 
+### 2026-05-13 — Shift the portfolio toward a sketch-style technical identity
+
+**Intent:** Give the landing page a hand-drawn visual direction with light/dark mode support, keep the technical 3D/network feel, and replace code-heavy project cards with clearer project summaries.
+
+**Files touched:**
+- app/globals.css
+- app/layout.tsx
+- app/page.tsx
+- components/footer.tsx
+- components/hero-visual.tsx
+- components/owners-section.tsx
+- components/project-card.tsx
+- components/section.tsx
+- components/terminal-panel.tsx
+- components/theme-toggle.tsx
+- data/site.ts
+- tailwind.config.ts
+
+**Reason:** User request on 2026-05-13 to explore a drawn/sketch visual style, remove the awkward code display, and add a light/dark mode switch.
+
+**Author:** Sol Soletti
+
 ### 2026-05-11 — Add owner profiles to the Anchorage Labs portfolio
 
 **Intent:** Add owner profiles to the Anchorage Labs portfolio

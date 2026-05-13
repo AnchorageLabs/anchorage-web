@@ -1,16 +1,16 @@
 export function TerminalPanel({ lines }: { lines: string[] }) {
   return (
-    <div className="overflow-hidden rounded-[2rem] border border-cyan-300/15 bg-[#020817]/90 shadow-card">
-      <div className="flex items-center gap-2 border-b border-white/10 px-5 py-4">
-        <span className="h-3 w-3 rounded-full bg-red-400/80" />
-        <span className="h-3 w-3 rounded-full bg-yellow-300/80" />
-        <span className="h-3 w-3 rounded-full bg-green-300/80" />
-        <span className="ml-3 font-mono text-xs text-slate-500">analysis.log</span>
+    <div className="overflow-hidden rounded-[2rem] border-2 border-ink bg-[var(--terminal)] shadow-[10px_10px_0_rgba(17,17,17,0.18)]">
+      <div className="flex items-center gap-2 border-b-2 border-[var(--terminal-text)]/25 px-5 py-4">
+        <span className="h-3 w-3 rounded-full border border-[var(--terminal-text)] bg-[#ff6b6b]" />
+        <span className="h-3 w-3 rounded-full border border-[var(--terminal-text)] bg-[#ffd166]" />
+        <span className="h-3 w-3 rounded-full border border-[var(--terminal-text)] bg-[var(--accent)]" />
+        <span className="ml-3 font-mono text-xs text-[var(--terminal-text)] opacity-55">analysis.log</span>
       </div>
       <div className="space-y-4 p-6 font-mono text-sm leading-7">
         {lines.map((line, index) => (
-          <p key={line} className="text-slate-300">
-            <span className="mr-3 text-cyan-300">{String(index + 1).padStart(2, "0")}</span>
+          <p key={line} className="text-[var(--terminal-text)] opacity-85">
+            <span className="mr-3 text-[var(--accent)]">{String(index + 1).padStart(2, "0")}</span>
             {line}
           </p>
         ))}

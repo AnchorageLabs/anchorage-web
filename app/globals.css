@@ -3,7 +3,35 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: light;
+  --page-bg: #b9cdc3;
+  --paper: #f7f5ee;
+  --paper-soft: rgba(255, 255, 255, 0.8);
+  --ink: #111111;
+  --shadow-ink: #111111;
+  --terminal: #111111;
+  --terminal-text: #f7f5ee;
+  --accent: #dff06b;
+  --accent-fill: #dff06b;
+  --accent-cyan: #9fe6ee;
+  --accent-violet: #c8b6ff;
+  --grid-line: rgba(17, 17, 17, 0.045);
+}
+
+:root[data-theme="dark"] {
   color-scheme: dark;
+  --page-bg: #141922;
+  --paper: #252b35;
+  --paper-soft: rgba(38, 44, 54, 0.82);
+  --ink: #f4efe4;
+  --shadow-ink: #050608;
+  --terminal: #07090d;
+  --terminal-text: #f4efe4;
+  --accent: #d7ef5d;
+  --accent-fill: #40522f;
+  --accent-cyan: #65c8d5;
+  --accent-violet: #a996ee;
+  --grid-line: rgba(244, 239, 228, 0.055);
 }
 
 * {
@@ -12,11 +40,12 @@
 
 body {
   min-height: 100vh;
+  background: var(--page-bg);
 }
 
 ::selection {
-  background: rgba(46, 233, 255, 0.28);
-  color: #ffffff;
+  background: rgba(223, 240, 107, 0.65);
+  color: var(--ink);
 }
 
 .grid-noise {
@@ -25,10 +54,33 @@ body {
   inset: 0;
   z-index: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 72px 72px;
   mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
+.sketch-card {
+  position: relative;
+  border: 3px solid var(--ink);
+  border-radius: 2rem;
+  box-shadow: 8px 8px 0 var(--shadow-ink);
+}
+
+.sketch-card::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 6px -7px -7px 6px;
+  z-index: -1;
+  border: 2px solid color-mix(in srgb, var(--ink) 45%, transparent);
+  border-radius: 2rem;
+  transform: rotate(1.2deg);
+}
+
+.sketch-line {
+  stroke-dasharray: 2 13;
+  filter: drop-shadow(1px 1px 0 rgba(17, 17, 17, 0.25));
 }
 
 main > section,

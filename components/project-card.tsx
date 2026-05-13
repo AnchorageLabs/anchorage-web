@@ -1,5 +1,3 @@
-import { CodeBlock } from "./code-block";
-
 type Project = {
   name: string;
   url: string;
@@ -8,39 +6,39 @@ type Project = {
   summary: string;
   usefulFor: string;
   technologies: string[];
-  codeFile: string;
-  code: string;
 };
 
 const accentClass: Record<string, string> = {
-  green: "from-signal-green/30 to-cyan-300/5 text-signal-green",
-  cyan: "from-signal-cyan/30 to-blue-400/5 text-signal-cyan",
-  violet: "from-signal-violet/30 to-cyan-300/5 text-violet-200",
+  green: "bg-[var(--accent-fill)]",
+  cyan: "bg-[var(--accent-cyan)]",
+  violet: "bg-[var(--accent-violet)]",
 };
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="group flex min-h-full flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-navy-900/70 shadow-card backdrop-blur transition hover:-translate-y-1 hover:border-cyan-300/30">
-      <div className={`bg-gradient-to-br ${accentClass[project.accent]} p-6`}>
+    <article className="sketch-card group flex min-h-full rotate-[-0.35deg] flex-col overflow-hidden bg-[var(--paper)] transition hover:-translate-y-1 hover:rotate-0">
+      <div className={`${accentClass[project.accent]} border-b-2 border-ink p-6`}>
         <div className="flex items-start justify-between gap-4">
           <div>
-            <h3 className="font-mono text-2xl font-semibold text-white">{project.name}</h3>
-            <p className="mt-2 text-sm text-slate-300">{project.status}</p>
+            <h3 className="font-mono text-3xl font-black text-ink">{project.name}</h3>
+            <p className="mt-2 text-sm font-bold text-ink/65">{project.status}</p>
           </div>
-          <a href={project.url} className="rounded-full border border-white/15 px-3 py-1 text-xs text-white/80 transition hover:bg-white/10">
+          <a href={project.url} className="rounded-full border-2 border-ink bg-[var(--paper)] px-3 py-1 text-xs font-black text-ink shadow-sketch transition hover:-translate-y-0.5">
             Repo
           </a>
         </div>
       </div>
       <div className="flex flex-1 flex-col gap-6 p-6">
-        <p className="text-sm leading-6 text-slate-300">{project.summary}</p>
-        <p className="text-sm leading-6 text-slate-500"><span className="text-slate-300">Useful for:</span> {project.usefulFor}</p>
+        <p className="text-base font-semibold leading-7 text-ink">{project.summary}</p>
+        <div className="rounded-[1.5rem] border-2 border-ink bg-[var(--paper-soft)] p-4 shadow-[4px_4px_0_var(--shadow-ink)]">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-ink/50">Useful for</p>
+          <p className="mt-2 text-sm font-medium leading-6 text-ink/70">{project.usefulFor}</p>
+        </div>
         <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech) => (
-            <span key={tech} className="rounded-full bg-white/[0.06] px-3 py-1 font-mono text-[11px] text-slate-300">{tech}</span>
+            <span key={tech} className="rounded-full border-2 border-ink bg-[var(--paper)] px-3 py-1 font-mono text-[11px] font-bold text-ink">{tech}</span>
           ))}
         </div>
-        <CodeBlock file={project.codeFile} code={project.code} compact />
       </div>
     </article>
   );

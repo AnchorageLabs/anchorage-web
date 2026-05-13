@@ -5,6 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        ink: "var(--ink)",
         navy: {
           950: "#020817",
           900: "#061323",
@@ -25,6 +26,7 @@ const config: Config = {
       boxShadow: {
         glow: "0 0 80px rgba(46, 233, 255, 0.16)",
         card: "0 24px 80px rgba(0, 0, 0, 0.35)",
+        sketch: "5px 5px 0 var(--shadow-ink)",
       },
     },
   },
