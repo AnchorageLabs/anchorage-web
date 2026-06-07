@@ -22,8 +22,8 @@ export default function Home() {
       <div className="grid-noise" />
       <header className="fixed left-0 right-0 top-0 z-50 border-b-2 border-ink/80 bg-[var(--paper-soft)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <a href="#top" className="flex items-center gap-3">
-            <span className="grid h-10 w-10 rotate-[-3deg] place-items-center rounded-[1rem] border-2 border-ink bg-[var(--accent-fill)] font-mono text-sm font-black text-ink shadow-sketch">AL</span>
+          <a href="#top" className="flex items-center gap-3 group">
+            <span className="grid h-10 w-10 rotate-[-3deg] place-items-center rounded-[1rem] border-2 border-ink bg-[var(--accent-fill)] font-mono text-sm font-black text-ink shadow-sketch transition-transform duration-200 group-hover:rotate-0 group-hover:scale-110">AL</span>
             <span className="text-sm font-black tracking-wide text-ink">Anchorage Labs</span>
           </a>
           <SiteNav items={nav} />
