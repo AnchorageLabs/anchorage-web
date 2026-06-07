@@ -3,6 +3,7 @@ import { HeroVisual } from "@/components/hero-visual";
 import { OwnersSection } from "@/components/owners-section";
 import { ProjectCard } from "@/components/project-card";
 import { Section } from "@/components/section";
+import { SiteNav } from "@/components/site-nav";
 import { TerminalPanel } from "@/components/terminal-panel";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { analysisSummary, internalSystems, openSourceProjects, organization, stack } from "@/data/site";
@@ -19,13 +20,7 @@ export default function Home() {
             <span className="grid h-10 w-10 rotate-[-3deg] place-items-center rounded-[1rem] border-2 border-ink bg-[var(--accent-fill)] font-mono text-sm font-black text-ink shadow-sketch">AL</span>
             <span className="text-sm font-black tracking-wide text-ink">Anchorage Labs</span>
           </a>
-          <nav className="hidden items-center gap-7 text-sm font-semibold text-ink/65 md:flex">
-            {nav.map((item) => (
-              <a key={item} href={`#${item.toLowerCase().replace(" ", "-")}`} className="transition hover:text-ink">
-                {item}
-              </a>
-            ))}
-          </nav>
+          <SiteNav items={nav} />
           <div className="flex items-center gap-3">
             <ThemeToggle />
             <a href={organization.github} className="rounded-full border-2 border-ink bg-[var(--paper)] px-4 py-2 text-sm font-bold text-ink shadow-sketch transition hover:-translate-y-0.5">
