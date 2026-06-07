@@ -29,6 +29,18 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 
 ## [unreleased]
 
+### 2026-05-14 — Add accent bar beneath each section title
+
+**Intent:** Each section header (About, Owners, Open Source, Systems, Stack) now displays a short rounded lime accent bar between the title and the intro paragraph, giving section headers a clearer visual anchor tied to the site's accent color.
+
+**Files touched:**
+- components/section.tsx
+- CHANGELOG.md
+
+**Reason:** Issue #8 — add accent underline bar under section titles for minimal UX improvement.
+
+**Author:**
+
 ### 2026-05-13 — Shift the portfolio toward a sketch-style technical identity
 
 **Intent:** Give the landing page a hand-drawn visual direction with light/dark mode support, keep the technical 3D/network feel, and replace code-heavy project cards with clearer project summaries.
