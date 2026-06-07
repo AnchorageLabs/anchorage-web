@@ -29,6 +29,18 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 
 ## [unreleased]
 
+### 2026-05-15 — Improve project card scanability with clearer repo actions
+
+**Intent:** The Open Source project cards now display a more prominent repository action button with filled background styling, larger text, and improved spacing. The button uses the card's accent color and provides stronger visual hierarchy, making the repository link more noticeable while maintaining the sketch-card aesthetic.
+
+**Files touched:**
+- components/project-card.tsx
+- CHANGELOG.md
+
+**Reason:** Issue #14 — improve project card scanability with clearer repo actions.
+
+**Author:** Anchorage Labs
+
 ### 2026-05-14 — Add accent bar beneath each section title
 
 **Intent:** Each section header (About, Owners, Open Source, Systems, Stack) now displays a short rounded lime accent bar between the title and the intro paragraph, giving section headers a clearer visual anchor tied to the site's accent color.
