@@ -16,6 +16,7 @@ export function Footer() {
             {openSourceProjects.map((project) => (
               <a key={project.name} href={project.url} className="rounded-full border-2 border-ink bg-[var(--paper)] px-4 py-2 shadow-sketch transition hover:-translate-y-0.5">{project.name}</a>
             ))}
+            <a href="#top" className="rounded-full border-2 border-ink bg-[var(--paper)] px-4 py-2 shadow-sketch transition hover:-translate-y-0.5">Back to top ↑</a>
           </div>
         </div>
       </div>
