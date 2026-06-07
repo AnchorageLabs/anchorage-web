@@ -14,6 +14,7 @@ export function Section({ id, eyebrow, title, intro, children }: SectionProps) {
       <div className="mb-12 max-w-3xl">
         <p className="font-mono text-sm font-black uppercase tracking-[0.28em] text-ink/55">{eyebrow}</p>
         <h2 className="mt-4 text-3xl font-black tracking-[-0.05em] text-ink sm:text-5xl">{title}</h2>
+        <div className="mt-5 h-1.5 w-20 rounded-full bg-[var(--accent)]" />
         <p className="mt-5 text-base font-medium leading-8 text-ink/65 sm:text-lg">{intro}</p>
       </div>
       {children}
