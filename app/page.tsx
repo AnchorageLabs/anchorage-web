@@ -104,7 +104,7 @@ export default function Home() {
       <Section id="stack" eyebrow="Technical Stack" title="Confirmed technologies across the repositories." intro="This stack reflects technologies observed in the analyzed repositories, manifests, Dockerfiles, workflows, and project documentation.">
         <div className="flex flex-wrap gap-3">
           {stack.map((item) => (
-            <span key={item} className="rounded-full border-2 border-ink bg-[var(--paper)] px-4 py-2 font-mono text-sm font-bold text-ink shadow-sketch">
+            <span key={item} className="rounded-full border-2 border-ink bg-[var(--paper)] px-4 py-2 font-mono text-sm font-bold text-ink shadow-sketch transition hover:-translate-y-0.5">
               {item}
             </span>
           ))}
