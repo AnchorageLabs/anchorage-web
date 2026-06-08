@@ -40,6 +40,15 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 - CHANGELOG.md
 
 **Reason:** Issue #22 — add a "Back to top" button on long marketing pages to improve navigation.
+### 2026-05-17 — Add footer ownership note
+
+**Intent:** The footer now displays a single line of text "Built in the open by Anchorage Labs." positioned below the button group, providing a brief ownership and credit note while maintaining visual consistency with the existing footer styling.
+
+**Files touched:**
+- components/footer.tsx
+- CHANGELOG.md
+
+**Reason:** Issue #26 — add a short footer note with ownership credit.
 
 **Author:** Anchorage Labs
 
