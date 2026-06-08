@@ -346,3 +346,1542 @@ Import trace for requested module:
 }
  GET / 500 in 53ms
  GET / 500 in 16ms
+
+> anchorage-labs-web@0.1.0 dev
+> next dev
+
+ ⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+ ⚠ Installing TypeScript as it was not found while loading "next.config.ts".
+
+Installing devDependencies (npm):
+- typescript@5.8.2
+
+
+added 87 packages, and audited 112 packages in 3s
+
+29 packages are looking for funding
+  run `npm fund` for details
+
+2 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+   ▲ Next.js 15.5.18
+   - Local:        http://localhost:3000
+   - Network:      http://172.19.0.6:3000
+
+ ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ✓ Ready in 1391ms
+ ○ Compiling / ...
+ ⨯ ./app/globals.css
+Module parse failed: Unexpected character '@' (1:0)
+> @tailwind base;
+| @tailwind components;
+| @tailwind utilities;
+
+Import trace for requested module:
+./app/globals.css
+./app/layout.tsx
+ ⨯ ./app/globals.css
+Module parse failed: Unexpected character '@' (1:0)
+> @tailwind base;
+| @tailwind components;
+| @tailwind utilities;
+
+Import trace for requested module:
+./app/globals.css
+./app/layout.tsx
+ ⨯ ./app/globals.css
+Module parse failed: Unexpected character '@' (1:0)
+> @tailwind base;
+| @tailwind components;
+| @tailwind utilities;
+
+Import trace for requested module:
+./app/globals.css
+./app/layout.tsx
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 1969ms
+ GET / 500 in 18ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/workspaces/AnchorageLabs-anchorage-labs-web/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/workspaces/AnchorageLabs-anchorage-labs-web/.next/cache/webpack/client-development-fallback/0.pack.gz'
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 57ms
+ GET / 500 in 16ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 57ms
+ GET / 500 in 16ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 52ms
+ GET / 500 in 16ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 47ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 47ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 60ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 51ms
+ GET / 500 in 14ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 49ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 57ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 46ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 56ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 47ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 47ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 49ms
+ GET / 500 in 11ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 46ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 58ms
+ GET / 500 in 14ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 53ms
+ GET / 500 in 17ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 50ms
+ GET / 500 in 16ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 51ms
+ GET / 500 in 16ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 58ms
+ GET / 500 in 16ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 48ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 48ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 56ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 58ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 51ms
+ GET / 500 in 14ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 50ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 48ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 52ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 55ms
+ GET / 500 in 14ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 50ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 49ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 49ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 51ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 48ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 51ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 53ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 49ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 56ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 51ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 54ms
+ GET / 500 in 14ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 53ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 62ms
+ GET / 500 in 19ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 65ms
+ GET / 500 in 19ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 60ms
+ GET / 500 in 20ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 64ms
+ GET / 500 in 18ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 54ms
+ GET / 500 in 14ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 60ms
+ GET / 500 in 15ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 61ms
+ GET / 500 in 17ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 56ms
+ GET / 500 in 14ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 59ms
+ GET / 500 in 15ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 56ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 49ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 52ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 52ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 56ms
+ GET / 500 in 14ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 50ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 243ms
+ GET / 500 in 33ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 54ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 61ms
+ GET / 500 in 18ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 54ms
+ GET / 500 in 17ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 54ms
+ GET / 500 in 17ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 62ms
+ GET / 500 in 17ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 57ms
+ GET / 500 in 17ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 48ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 48ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 49ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 47ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 56ms
+ GET / 500 in 17ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 48ms
+ GET / 500 in 12ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 49ms
+ GET / 500 in 13ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+[Error: ENOENT: no such file or directory, open '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspaces/AnchorageLabs-anchorage-labs-web/.next/required-server-files.json'
+}
+ GET / 500 in 57ms
+ GET / 500 in 14ms

@@ -29,6 +29,16 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 
 ## [unreleased]
 
+### 2026-05-17 — Add compact proof-strip below the hero section
+
+**Intent:** A new proof-strip component appears immediately below the hero and above the About section, displaying three concise proof points grounded in existing site themes: open protocols and clear contracts, auditable automation and inspectable workflows, and developer tooling with operational discipline. The strip uses the existing sketch-card aesthetic with responsive grid layout (1 column on mobile, 3 columns on desktop), improving the homepage's first-scroll experience and reinforcing core organizational strengths.
+
+**Files touched:**
+- components/proof-strip.tsx
+- app/page.tsx
+- CHANGELOG.md
+
+**Reason:** Issue #20 — add a compact proof-strip below the hero that highlights three concrete Anchorage Labs strengths.
 ### 2026-05-17 — Add floating "Back to top" button on long pages
 
 **Intent:** Long pages now display a circular floating button fixed to the bottom-right corner that appears after scrolling past 600px. Clicking the button smoothly scrolls to the top of the page, or instantly if the user has enabled prefers-reduced-motion. The button uses the site's existing theme tokens (accent color, ink, shadow, border radius) and sketch-card styling, and is fully accessible with aria-label and keyboard focus support.
