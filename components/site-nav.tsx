@@ -57,10 +57,10 @@ export function SiteNav({ items }: SiteNavProps) {
         <a
           key={item.id}
           href={`#${item.id}`}
-          className={`transition ${
+          className={`px-3 py-1 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 ${
             activeId === item.id
               ? "text-ink underline decoration-[var(--accent)] decoration-3 underline-offset-4"
-              : "hover:text-ink"
+              : "hover:bg-[var(--paper)] hover:border-2 hover:border-ink hover:rounded-full hover:text-ink"
           }`}
         >
           {item.label}
