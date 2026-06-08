@@ -45,6 +45,9 @@ export default function Home() {
           <h1 className="max-w-4xl text-5xl font-black tracking-[-0.06em] text-ink sm:text-6xl lg:text-7xl">
             Tools for teams that like their software clear, inspectable, and close to the metal.
           </h1>
+          <p className="mt-3 max-w-2xl text-lg font-medium leading-8 text-ink/70">
+            Ship software end to end, autonomously.
+          </p>
           <p className="mt-7 max-w-2xl text-lg font-medium leading-8 text-ink/70">
             We create open protocols, CLIs, automation systems, and infrastructure-oriented products for developers who care about clear contracts, inspectable workflows, and practical reliability.
           </p>
