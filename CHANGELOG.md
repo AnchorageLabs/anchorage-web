@@ -29,6 +29,20 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 
 ## [unreleased]
 
+### 2026-05-17 — Add floating "Back to top" button on long pages
+
+**Intent:** Long pages now display a circular floating button fixed to the bottom-right corner that appears after scrolling past 600px. Clicking the button smoothly scrolls to the top of the page, or instantly if the user has enabled prefers-reduced-motion. The button uses the site's existing theme tokens (accent color, ink, shadow, border radius) and sketch-card styling, and is fully accessible with aria-label and keyboard focus support.
+
+**Files touched:**
+- components/back-to-top-button.tsx
+- app/layout.tsx
+- app/globals.css
+- CHANGELOG.md
+
+**Reason:** Issue #22 — add a "Back to top" button on long marketing pages to improve navigation.
+
+**Author:** Anchorage Labs
+
 ### 2026-05-16 — Add subtle bracket anchor cues to section headings
 
 **Intent:** Each major section heading (About, Owners, Open Source, Systems, Stack) now displays a small bracket-like accent marker in the top-left corner, improving scanability when scrolling the landing page. The bracket uses the existing accent color with reduced opacity to maintain the sketch-style aesthetic while providing a restrained visual cue that makes section boundaries easier to recognize at a glance.

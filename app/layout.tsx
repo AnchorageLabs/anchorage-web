@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import type { ReactNode } from "react";
+import { BackToTopButton } from "@/components/back-to-top-button";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${jetBrains.variable} bg-[var(--page-bg)] font-sans text-ink antialiased`}>
         {children}
+        <BackToTopButton />
       </body>
     </html>
   );
