@@ -29,15 +29,15 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 
 ## [unreleased]
 
-### 2026-06-08 — Add footer note with ownership credit
+### 2026-06-08 — Add footer note with dynamic current year
 
-**Intent:** The footer now displays a single line of text "Built in the open by Anchorage Labs." positioned below the button group, providing a clear ownership and credit note while maintaining the sketch-style aesthetic with existing text utility classes.
+**Intent:** The footer now displays a single line of text "Built in {current year} by Anchorage Labs." positioned below the button group, providing a clear ownership and credit note with the current year automatically updated. The text maintains the sketch-style aesthetic with existing text utility classes (text-sm, font-medium, text-ink/65).
 
 **Files touched:**
 - components/footer.tsx
 - CHANGELOG.md
 
-**Reason:** Issue #26 — add a short footer note with ownership credit.
+**Reason:** Issue #26 — add a short footer note with the current year.
 
 **Author:** Anchorage Labs
 
