@@ -52,7 +52,7 @@ export function SiteNav({ items }: SiteNavProps) {
   }, [items]);
 
   return (
-    <nav className="hidden items-center gap-7 text-sm font-semibold text-ink/65 md:flex">
+    <nav className="hidden items-center gap-7 text-sm font-semibold text-ink/65 md:flex" aria-label="Primary">
       {items.map((item) => (
         <a
           key={item.id}
