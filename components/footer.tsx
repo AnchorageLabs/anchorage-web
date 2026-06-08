@@ -19,6 +19,7 @@ export function Footer() {
             <a href="#top" className="rounded-full border-2 border-ink bg-[var(--paper)] px-4 py-2 shadow-sketch transition hover:-translate-y-0.5">Back to top ↑</a>
           </div>
         </div>
+        <p className="mt-6 text-sm font-medium text-ink/65">Built in the open by Anchorage Labs.</p>
       </div>
     </footer>
   );
