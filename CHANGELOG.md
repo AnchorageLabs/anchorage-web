@@ -39,6 +39,26 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 - CHANGELOG.md
 
 **Reason:** Issue #20 — add a compact proof-strip below the hero that highlights three concrete Anchorage Labs strengths.
+### 2026-05-17 — Add floating "Back to top" button on long pages
+
+**Intent:** Long pages now display a circular floating button fixed to the bottom-right corner that appears after scrolling past 600px. Clicking the button smoothly scrolls to the top of the page, or instantly if the user has enabled prefers-reduced-motion. The button uses the site's existing theme tokens (accent color, ink, shadow, border radius) and sketch-card styling, and is fully accessible with aria-label and keyboard focus support.
+
+**Files touched:**
+- components/back-to-top-button.tsx
+- app/layout.tsx
+- app/globals.css
+- CHANGELOG.md
+
+**Reason:** Issue #22 — add a "Back to top" button on long marketing pages to improve navigation.
+### 2026-05-17 — Add footer ownership note
+
+**Intent:** The footer now displays a single line of text "Built in the open by Anchorage Labs." positioned below the button group, providing a brief ownership and credit note while maintaining visual consistency with the existing footer styling.
+
+**Files touched:**
+- components/footer.tsx
+- CHANGELOG.md
+
+**Reason:** Issue #26 — add a short footer note with ownership credit.
 
 **Author:** Anchorage Labs
 
