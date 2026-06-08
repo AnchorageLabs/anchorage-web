@@ -29,6 +29,18 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 
 ## [unreleased]
 
+### 2026-05-17 — Add footer ownership note to landing page
+
+**Intent:** The footer now displays a small ownership/credit line "Built in the open by Anchorage Labs." positioned below the button group, using the same text styling as the existing footer description to maintain visual consistency.
+
+**Files touched:**
+- components/footer.tsx
+- CHANGELOG.md
+
+**Reason:** Issue #26 — add a short footer note with ownership credit.
+
+**Author:** Anchorage Labs
+
 ### 2026-05-16 — Add subtle bracket anchor cues to section headings
 
 **Intent:** Each major section heading (About, Owners, Open Source, Systems, Stack) now displays a small bracket-like accent marker in the top-left corner, improving scanability when scrolling the landing page. The bracket uses the existing accent color with reduced opacity to maintain the sketch-style aesthetic while providing a restrained visual cue that makes section boundaries easier to recognize at a glance.
