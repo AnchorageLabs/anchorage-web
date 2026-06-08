@@ -2,12 +2,14 @@
 
 import { useEffect, useState } from "react";
 
+const SCROLL_THRESHOLD = 600;
+
 export function BackToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     function handleScroll() {
-      setIsVisible(window.scrollY > 600);
+      setIsVisible(window.scrollY > SCROLL_THRESHOLD);
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -27,7 +29,7 @@ export function BackToTopButton() {
       type="button"
       onClick={handleClick}
       aria-label="Back to top"
-      className={`fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full border-2 border-ink bg-[var(--accent-fill)] text-ink shadow-sketch transition-opacity duration-300 ease-in-out hover:-translate-y-0.5 focus:outline-2 focus:outline-offset-2 focus:outline-ink md:bottom-6 md:right-6 sm:bottom-4 sm:right-4 ${
+      className={`back-to-top-button fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full border-2 border-ink bg-[var(--accent-fill)] text-ink shadow-sketch transition-opacity duration-300 ease-in-out hover:-translate-y-0.5 focus:outline-2 focus:outline-offset-2 focus:outline-ink sm:bottom-4 sm:right-4 ${
         isVisible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
       }`}
     >
@@ -42,7 +44,7 @@ export function BackToTopButton() {
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={2}
-          d="M7 16l-4-4m0 0l4-4m-4 4h18"
+          d="M12 19V5m0 0l-7 7m7-7l7 7"
         />
       </svg>
     </button>
