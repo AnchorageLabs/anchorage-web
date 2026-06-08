@@ -118,4 +118,8 @@ main > header {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
   }
+
+  [class*="back-to-top"] {
+    transition: none !important;
+  }
 }
