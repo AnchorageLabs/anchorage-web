@@ -2,6 +2,7 @@ import { Footer } from "@/components/footer";
 import { HeroVisual } from "@/components/hero-visual";
 import { OwnersSection } from "@/components/owners-section";
 import { ProjectCard } from "@/components/project-card";
+import { ProofStrip } from "@/components/proof-strip";
 import { Section } from "@/components/section";
 import { SiteNav } from "@/components/site-nav";
 import { TerminalPanel } from "@/components/terminal-panel";
@@ -59,6 +60,8 @@ export default function Home() {
         </div>
         <HeroVisual />
       </section>
+
+      <ProofStrip />
 
       <Section id="about" eyebrow="About" title="Precise software systems, not demos." intro="Anchorage Labs is an independent organization focused on useful technical products: backend systems, infrastructure, automation, developer tools, and open source primitives.">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">

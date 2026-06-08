@@ -29,6 +29,19 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 
 ## [unreleased]
 
+### 2026-05-17 — Add compact proof-strip below the hero section
+
+**Intent:** A new proof-strip component appears immediately below the hero and above the About section, displaying three concise proof points grounded in existing site themes: open protocols and clear contracts, auditable automation and inspectable workflows, and developer tooling with operational discipline. The strip uses the existing sketch-card aesthetic with responsive grid layout (1 column on mobile, 3 columns on desktop), improving the homepage's first-scroll experience and reinforcing core organizational strengths.
+
+**Files touched:**
+- components/proof-strip.tsx
+- app/page.tsx
+- CHANGELOG.md
+
+**Reason:** Issue #20 — add a compact proof-strip below the hero that highlights three concrete Anchorage Labs strengths.
+
+**Author:** Anchorage Labs
+
 ### 2026-05-16 — Add subtle bracket anchor cues to section headings
 
 **Intent:** Each major section heading (About, Owners, Open Source, Systems, Stack) now displays a small bracket-like accent marker in the top-left corner, improving scanability when scrolling the landing page. The bracket uses the existing accent color with reduced opacity to maintain the sketch-style aesthetic while providing a restrained visual cue that makes section boundaries easier to recognize at a glance.
