@@ -29,6 +29,18 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 
 ## [unreleased]
 
+### 2026-05-16 — Add subtle bracket anchor cues to section headings
+
+**Intent:** Each major section heading (About, Owners, Open Source, Systems, Stack) now displays a small bracket-like accent marker in the top-left corner, improving scanability when scrolling the landing page. The bracket uses the existing accent color with reduced opacity to maintain the sketch-style aesthetic while providing a restrained visual cue that makes section boundaries easier to recognize at a glance.
+
+**Files touched:**
+- components/section.tsx
+- CHANGELOG.md
+
+**Reason:** Issue #18 — make section headings easier to scan with subtle anchor cues.
+
+**Author:** Anchorage Labs
+
 ### 2026-05-15 — Improve project card scanability with clearer repo actions
 
 **Intent:** The Open Source project cards now display a more prominent repository action button with filled background styling, larger text, and improved spacing. The button uses the card's accent color and provides stronger visual hierarchy, making the repository link more noticeable while maintaining the sketch-card aesthetic.
