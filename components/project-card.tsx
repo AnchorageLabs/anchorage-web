@@ -9,13 +9,13 @@ type Project = {
 };
 
 const accentClass: Record<string, string> = {
-  green: "bg-[var(--accent-fill)]",
+  red: "bg-[var(--accent-fill)]",
   cyan: "bg-[var(--accent-cyan)]",
   violet: "bg-[var(--accent-violet)]",
 };
 
 const buttonAccentClass: Record<string, string> = {
-  green: "bg-[var(--accent-fill)] text-ink hover:shadow-[4px_4px_0_var(--ink)]",
+  red: "bg-[var(--accent-fill)] text-ink hover:shadow-[4px_4px_0_var(--ink)]",
   cyan: "bg-[var(--accent-cyan)] text-ink hover:shadow-[4px_4px_0_var(--ink)]",
   violet: "bg-[var(--accent-violet)] text-ink hover:shadow-[4px_4px_0_var(--ink)]",
 };
