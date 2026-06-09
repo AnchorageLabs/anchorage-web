@@ -11,8 +11,8 @@
   --shadow-ink: #111111;
   --terminal: #111111;
   --terminal-text: #f7f5ee;
-  --accent: #dff06b;
-  --accent-fill: #dff06b;
+  --accent: #ff5c5c;
+  --accent-fill: #ff5c5c;
   --accent-cyan: #9fe6ee;
   --accent-violet: #c8b6ff;
   --grid-line: rgba(17, 17, 17, 0.045);
@@ -27,8 +27,8 @@
   --shadow-ink: #050608;
   --terminal: #07090d;
   --terminal-text: #f4efe4;
-  --accent: #d7ef5d;
-  --accent-fill: #40522f;
+  --accent: #ff6b6b;
+  --accent-fill: #ff6b6b;
   --accent-cyan: #65c8d5;
   --accent-violet: #a996ee;
   --grid-line: rgba(244, 239, 228, 0.055);
@@ -44,7 +44,7 @@ body {
 }
 
 ::selection {
-  background: rgba(223, 240, 107, 0.65);
+  background: rgba(255, 92, 92, 0.65);
   color: var(--ink);
 }
 

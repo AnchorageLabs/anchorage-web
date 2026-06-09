@@ -10,7 +10,7 @@ export const openSourceProjects = [
     name: "envy",
     url: "https://github.com/AnchorageLabs/envy",
     status: "Alpha CLI",
-    accent: "green",
+    accent: "red",
     summary:
       "A lightweight dotfiles CLI for backing up, restoring, syncing, and bootstrapping development environments across machines.",
     usefulFor: "Developers who want portable, git-backed workstation setup without adopting a heavy dotfiles framework.",
