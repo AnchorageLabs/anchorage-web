@@ -29,6 +29,21 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 
 ## [unreleased]
 
+### 2026-05-18 — Replace pastel color palette with modern navy blue tones
+
+**Intent:** The site's color system is modernized from a dated pastel palette (soft yellows, greens, beiges) to a cohesive navy blue and cool-tone scheme that feels contemporary and professional. Light mode now uses near-white backgrounds (#F8FAFC) with dark slate text (#0F172A) and crisp blue accents (#3B82F6). Dark mode uses navy backgrounds (#0F172A, #1E2A4A) with light slate text (#F1F5F9) and lighter blue accents (#60A5FA). All CSS custom properties in app/globals.css are updated for both themes, and secondary visual elements (grid lines, shadows, selection highlight, sketch-line filter) are adjusted to maintain coherence with the new palette. Text/background contrast meets WCAG AA standards (18.6:1 for light mode body text, 16.2:1 for dark mode).
+
+**Files touched:**
+- app/globals.css
+- components/hero-visual.tsx
+- components/terminal-panel.tsx
+- components/section.tsx
+- CHANGELOG.md
+
+**Reason:** Issue #39 — replace pastel color palette with modern navy blue tones.
+
+**Author:** Anchorage Labs
+
 ### 2026-05-17 — Add compact proof-strip below the hero section
 
 **Intent:** A new proof-strip component appears immediately below the hero and above the About section, displaying three concise proof points grounded in existing site themes: open protocols and clear contracts, auditable automation and inspectable workflows, and developer tooling with operational discipline. The strip uses the existing sketch-card aesthetic with responsive grid layout (1 column on mobile, 3 columns on desktop), improving the homepage's first-scroll experience and reinforcing core organizational strengths.

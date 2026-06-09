@@ -1,6 +1,6 @@
 export function TerminalPanel({ lines }: { lines: string[] }) {
   return (
-    <div className="overflow-hidden rounded-[2rem] border-2 border-ink bg-[var(--terminal)] shadow-[10px_10px_0_rgba(17,17,17,0.18)]">
+    <div className="overflow-hidden rounded-[2rem] border-2 border-ink bg-[var(--terminal)] shadow-[10px_10px_0_rgba(15,23,42,0.18)]">
       <div className="flex items-center gap-2 border-b-2 border-[var(--terminal-text)]/25 px-5 py-4">
         <span className="h-3 w-3 rounded-full border border-[var(--terminal-text)] bg-[#ff6b6b]" />
         <span className="h-3 w-3 rounded-full border border-[var(--terminal-text)] bg-[#ffd166]" />
