@@ -43,7 +43,7 @@ export default function Home() {
             <span className="h-2.5 w-2.5 rounded-full border-2 border-ink bg-[var(--accent)]" />
             Developer-first software lab
           </div>
-          <h1 className="max-w-4xl text-5xl font-black tracking-[-0.06em] text-ink sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-4xl text-6xl font-black tracking-[-0.04em] text-ink sm:text-7xl lg:text-8xl">
             Tools for teams that like their software clear, inspectable, and close to the metal.
           </h1>
           <p className="mt-3 max-w-2xl text-lg font-medium leading-8 text-ink/70">
@@ -53,7 +53,7 @@ export default function Home() {
             We create open protocols, CLIs, automation systems, and infrastructure-oriented products for developers who care about clear contracts, inspectable workflows, and practical reliability.
           </p>
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <a href="#open-source" className="rounded-full border-2 border-ink bg-[var(--accent-fill)] px-6 py-3 text-sm font-black text-ink shadow-sketch transition hover:-translate-y-1">
+            <a href="#open-source" className="rounded-full border-2 border-ink bg-[var(--accent-fill)] px-6 py-3 text-sm font-black text-ink shadow-sketch transition hover:scale-105 hover:shadow-lg hover:-translate-y-1">
               View open source projects
             </a>
             <a href="#systems" className="rounded-full border-2 border-ink bg-[var(--paper)] px-6 py-3 text-sm font-black text-ink shadow-sketch transition hover:-translate-y-1">

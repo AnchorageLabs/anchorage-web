@@ -110,6 +110,34 @@ main > header {
   }
 }
 
+@keyframes glow-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  z-index: -1;
+  background: radial-gradient(circle at 30% 50%, var(--accent), var(--accent-cyan), transparent);
+  background-size: 200% 200%;
+  filter: blur(40px);
+  opacity: 0.4;
+  animation: glow-shift 7s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
