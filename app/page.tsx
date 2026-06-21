@@ -21,16 +21,16 @@ export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-[var(--page-bg)] text-ink transition-colors duration-300">
       <div className="grid-noise" />
-      <header className="fixed left-0 right-0 top-0 z-50 border-b-2 border-ink/80 bg-[var(--paper-soft)] backdrop-blur-xl">
+      <header className="fixed left-0 right-0 top-0 z-50 border-b border-[var(--border)] bg-[var(--paper-soft)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <a href="#top" className="flex items-center gap-3 group">
-            <span className="grid h-10 w-10 rotate-[-3deg] place-items-center rounded-[1rem] border-2 border-ink bg-[var(--accent-fill)] font-mono text-sm font-black text-ink shadow-sketch transition-transform duration-200 group-hover:rotate-0 group-hover:scale-110">AL</span>
-            <span className="text-sm font-black tracking-wide text-ink">Anchorage Labs</span>
+            <span className="grid h-10 w-10 place-items-center rounded-lg border border-[var(--border)] bg-[var(--accent-primary)] font-mono text-sm font-heavy text-white transition-transform duration-200 group-hover:scale-110">AL</span>
+            <span className="text-sm font-heavy tracking-wide text-ink">Anchorage Labs</span>
           </a>
           <SiteNav items={nav} />
           <div className="flex items-center gap-3">
             <ThemeToggle />
-            <a href={organization.github} className="rounded-full border-2 border-ink bg-[var(--paper)] px-4 py-2 text-sm font-bold text-ink shadow-sketch transition hover:-translate-y-0.5">
+            <a href={organization.github} className="rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)] px-4 py-2 text-sm font-semibold text-ink transition hover:bg-[var(--bg-tertiary)]">
               GitHub
             </a>
           </div>
@@ -39,24 +39,24 @@ export default function Home() {
 
       <section id="top" className="relative mx-auto grid min-h-screen max-w-7xl items-center gap-12 px-6 pb-20 pt-32 lg:grid-cols-[1.02fr_0.98fr] lg:px-8">
         <div>
-          <div className="mb-6 inline-flex rotate-[-1deg] items-center gap-3 rounded-full border-2 border-ink bg-[var(--paper)] px-4 py-2 text-sm font-bold text-ink shadow-sketch">
-            <span className="h-2.5 w-2.5 rounded-full border-2 border-ink bg-[var(--accent)]" />
+          <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[var(--border)] bg-[var(--bg-secondary)] px-4 py-2 text-sm font-semibold text-ink">
+            <span className="h-2.5 w-2.5 rounded-full bg-[var(--accent-primary)]" />
             Developer-first software lab
           </div>
-          <h1 className="max-w-4xl text-5xl font-black tracking-[-0.06em] text-ink sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-4xl text-5xl font-heavy tracking-[-0.02em] text-ink sm:text-6xl lg:text-7xl">
             Tools for teams that like their software clear, inspectable, and close to the metal.
           </h1>
-          <p className="mt-3 max-w-2xl text-lg font-medium leading-8 text-ink/70">
+          <p className="mt-3 max-w-2xl text-lg font-medium leading-8 text-text-secondary">
             Ship software end to end, autonomously.
           </p>
-          <p className="mt-7 max-w-2xl text-lg font-medium leading-8 text-ink/70">
+          <p className="mt-7 max-w-2xl text-lg font-medium leading-8 text-text-secondary">
             We create open protocols, CLIs, automation systems, and infrastructure-oriented products for developers who care about clear contracts, inspectable workflows, and practical reliability.
           </p>
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <a href="#open-source" className="rounded-full border-2 border-ink bg-[var(--accent-fill)] px-6 py-3 text-sm font-black text-ink shadow-sketch transition hover:-translate-y-1">
+            <a href="#open-source" className="rounded-lg border border-[var(--border)] bg-[var(--accent-primary)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#0860ca]">
               View open source projects
             </a>
-            <a href="#systems" className="rounded-full border-2 border-ink bg-[var(--paper)] px-6 py-3 text-sm font-black text-ink shadow-sketch transition hover:-translate-y-1">
+            <a href="#systems" className="rounded-lg border border-[var(--border)] bg-[var(--bg-secondary)] px-6 py-3 text-sm font-semibold text-ink transition hover:bg-[var(--bg-tertiary)]">
               See the systems
             </a>
           </div>
@@ -70,9 +70,9 @@ export default function Home() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {["Clear protocols", "Auditable automation", "Developer ergonomics", "Operational discipline"].map((item) => (
             <div key={item} className="sketch-card bg-[var(--paper)] p-6">
-              <div className="mb-5 h-3 w-16 rotate-[-2deg] rounded-full border-2 border-ink bg-[var(--accent-fill)]" />
-              <h3 className="text-lg font-black text-ink">{item}</h3>
-              <p className="mt-3 text-sm font-medium leading-6 text-ink/65">Built with explicit boundaries, small composable tools, and a bias toward systems developers can understand and improve.</p>
+              <div className="mb-5 h-1 w-16 rounded-full bg-[var(--accent-primary)]" />
+              <h3 className="text-lg font-heavy text-ink">{item}</h3>
+              <p className="mt-3 text-sm font-medium leading-6 text-text-secondary">Built with explicit boundaries, small composable tools, and a bias toward systems developers can understand and improve.</p>
             </div>
           ))}
         </div>
@@ -97,10 +97,10 @@ export default function Home() {
             {internalSystems.map((system) => (
               <div key={system.name} className="sketch-card bg-[var(--paper)] p-6">
                 <div className="flex flex-wrap items-center justify-between gap-3">
-                  <h3 className="font-mono text-lg font-black text-ink">{system.name}</h3>
-                  <span className="rounded-full border-2 border-ink bg-[var(--paper)] px-3 py-1 text-xs font-bold text-ink">{system.visibility}</span>
+                  <h3 className="font-mono text-lg font-heavy text-ink">{system.name}</h3>
+                  <span className="rounded-full border border-[var(--border)] bg-[var(--bg-secondary)] px-3 py-1 text-xs font-semibold text-text-secondary">{system.visibility}</span>
                 </div>
-                <p className="mt-3 text-sm font-medium leading-6 text-ink/65">{system.description}</p>
+                <p className="mt-3 text-sm font-medium leading-6 text-text-secondary">{system.description}</p>
               </div>
             ))}
           </div>
@@ -110,7 +110,7 @@ export default function Home() {
       <Section id="stack" eyebrow="Technical Stack" title="Confirmed technologies across the repositories." intro="This stack reflects technologies observed in the analyzed repositories, manifests, Dockerfiles, workflows, and project documentation.">
         <div className="flex flex-wrap gap-3">
           {stack.map((item) => (
-            <span key={item} className="rounded-full border-2 border-ink bg-[var(--paper)] px-4 py-2 font-mono text-sm font-bold text-ink shadow-sketch transition hover:-translate-y-0.5">
+            <span key={item} className="rounded-full border border-[var(--border)] bg-[var(--bg-secondary)] px-4 py-2 font-mono text-sm font-semibold text-text-secondary transition hover:bg-[var(--bg-tertiary)]">
               {item}
             </span>
           ))}
