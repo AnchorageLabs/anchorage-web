@@ -52,15 +52,15 @@ export function SiteNav({ items }: SiteNavProps) {
   }, [items]);
 
   return (
-    <nav className="hidden items-center gap-7 text-sm font-semibold text-ink/65 md:flex" aria-label="Primary">
+    <nav className="hidden items-center gap-7 text-sm font-semibold text-text-secondary md:flex" aria-label="Primary">
       {items.map((item) => (
         <a
           key={item.id}
           href={`#${item.id}`}
-          className={`px-3 py-1 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 ${
+          className={`px-3 py-1 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 ${
             activeId === item.id
-              ? "text-ink underline decoration-[var(--accent)] decoration-3 underline-offset-4"
-              : "hover:bg-[var(--paper)] hover:border-2 hover:border-ink hover:rounded-full hover:text-ink"
+              ? "text-ink underline decoration-[var(--accent-primary)] decoration-3 underline-offset-4"
+              : "hover:text-ink"
           }`}
         >
           {item.label}

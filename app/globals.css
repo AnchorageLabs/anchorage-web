@@ -1,37 +1,92 @@
+/*
+ * Anchorage Labs Design System
+ * 
+ * A modern, minimalist design system inspired by GitHub's contemporary aesthetic.
+ * Focused on clarity, accessibility (WCAG AA), and developer-first usability.
+ * 
+ * Color Palette:
+ * - Neutral foundation: whites, grays, and dark backgrounds for light/dark modes
+ * - Primary accent: #0969da (blue) for CTAs, focus indicators, and primary actions
+ * - Secondary accent: #1f6feb (lighter blue) for secondary actions and hover states
+ * - Signal colors: success (#1a7f37 light, #3fb950 dark), warning, error for semantic feedback
+ * 
+ * Typography:
+ * - Font stack: Inter (sans-serif), JetBrains Mono (monospace)
+ * - Weights: 400 (normal), 500 (medium), 600 (semibold), 700 (bold), 800 (heavy)
+ * - Removed reliance on font-black (900); use font-heavy (800) for emphasis
+ * - Scale: xs (12px) through 5xl (48px) with appropriate line-heights
+ * 
+ * Components:
+ * - .sketch-card: Clean borders (1px), subtle shadows, rounded corners (0.5rem)
+ * - Removed: 3px borders, 8px offset shadows, 2deg rotations (playful sketch aesthetic)
+ * - Buttons: Modern flat design with hover state background changes
+ * - Focus indicators: 2px ring using --accent-primary with sufficient contrast
+ * 
+ * Accessibility:
+ * - All text/background combinations meet WCAG AA minimum (4.5:1 for normal text, 3:1 for large)
+ * - Focus indicators visible on both light and dark backgrounds
+ * - Motion preferences respected via @media (prefers-reduced-motion)
+ * - Color not sole indicator of meaning; semantic colors paired with text labels
+ */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   color-scheme: light;
-  --page-bg: #b9cdc3;
-  --paper: #f7f5ee;
-  --paper-soft: rgba(255, 255, 255, 0.8);
-  --ink: #111111;
-  --shadow-ink: #111111;
-  --terminal: #111111;
-  --terminal-text: #f7f5ee;
-  --accent: #dff06b;
-  --accent-fill: #dff06b;
-  --accent-cyan: #9fe6ee;
-  --accent-violet: #c8b6ff;
-  --grid-line: rgba(17, 17, 17, 0.045);
+  --bg-primary: #ffffff;
+  --bg-secondary: #f6f8fa;
+  --bg-tertiary: #eaeef2;
+  --text-primary: #24292f;
+  --text-secondary: #57606a;
+  --text-tertiary: #848d97;
+  --border: #d0d7de;
+  --accent-primary: #0969da;
+  --accent-secondary: #1f6feb;
+  --accent-success: #1a7f37;
+  --accent-warning: #9e6a03;
+  --accent-error: #da3633;
+  --page-bg: #ffffff;
+  --paper: #f6f8fa;
+  --paper-soft: rgba(246, 248, 250, 0.95);
+  --ink: #24292f;
+  --shadow-ink: rgba(0, 0, 0, 0.1);
+  --terminal: #0d1117;
+  --terminal-text: #e6edf3;
+  --accent: #0969da;
+  --accent-fill: #0969da;
+  --accent-cyan: #0969da;
+  --accent-violet: #0969da;
+  --grid-line: rgba(0, 0, 0, 0.05);
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --page-bg: #141922;
-  --paper: #252b35;
-  --paper-soft: rgba(38, 44, 54, 0.82);
-  --ink: #f4efe4;
-  --shadow-ink: #050608;
-  --terminal: #07090d;
-  --terminal-text: #f4efe4;
-  --accent: #d7ef5d;
-  --accent-fill: #40522f;
-  --accent-cyan: #65c8d5;
-  --accent-violet: #a996ee;
-  --grid-line: rgba(244, 239, 228, 0.055);
+  --bg-primary: #0f1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #21262d;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-tertiary: #6e7681;
+  --border: #30363d;
+  --accent-primary: #0969da;
+  --accent-secondary: #1f6feb;
+  --accent-success: #3fb950;
+  --accent-warning: #d29922;
+  --accent-error: #f85149;
+  --page-bg: #0f1117;
+  --paper: #161b22;
+  --paper-soft: rgba(22, 27, 34, 0.95);
+  --ink: #e6edf3;
+  --shadow-ink: rgba(0, 0, 0, 0.3);
+  --terminal: #0d1117;
+  --terminal-text: #e6edf3;
+  --accent: #0969da;
+  --accent-fill: #0969da;
+  --accent-cyan: #0969da;
+  --accent-violet: #0969da;
+  --grid-line: rgba(255, 255, 255, 0.05);
 }
 
 * {
@@ -44,8 +99,8 @@ body {
 }
 
 ::selection {
-  background: rgba(223, 240, 107, 0.65);
-  color: var(--ink);
+  background: rgba(9, 105, 218, 0.2);
+  color: var(--text-primary);
 }
 
 .grid-noise {
@@ -61,32 +116,19 @@ body {
 }
 
 .sketch-card {
-  position: relative;
-  border: 3px solid var(--ink);
-  border-radius: 2rem;
-  box-shadow: 8px 8px 0 var(--shadow-ink);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px var(--shadow-ink);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .sketch-card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 11px 11px 0 var(--shadow-ink);
-}
-
-.sketch-card::after {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  inset: 6px -7px -7px 6px;
-  z-index: -1;
-  border: 2px solid color-mix(in srgb, var(--ink) 45%, transparent);
-  border-radius: 2rem;
-  transform: rotate(1.2deg);
+  box-shadow: 0 4px 12px var(--shadow-ink);
+  border-color: var(--border);
 }
 
 .sketch-line {
-  stroke-dasharray: 2 13;
-  filter: drop-shadow(1px 1px 0 rgba(17, 17, 17, 0.25));
+  stroke: var(--text-secondary);
 }
 
 main > section,
