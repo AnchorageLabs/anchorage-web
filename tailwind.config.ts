@@ -13,10 +13,10 @@ const config: Config = {
           700: "#102845",
         },
         signal: {
-          cyan: "#2ee9ff",
-          blue: "#4d8dff",
-          violet: "#8d5cff",
-          green: "#5cffb1",
+          cyan: "#4b7b94",
+          blue: "#6b7280",
+          violet: "#8b7ba8",
+          green: "#6b7280",
         },
       },
       fontFamily: {
