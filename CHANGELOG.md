@@ -29,6 +29,21 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 
 ## [unreleased]
 
+### 2026-05-18 — Modernize color palette to professional aesthetic
+
+**Intent:** The site's color palette has been updated from bright, saturated colors (lime green, bright cyan, vibrant violet) to a refined, professional palette featuring muted greys, teals, and earth tones. Light theme now uses soft off-white backgrounds (#f9f7f5), pure white paper (#ffffff), and muted slate grey accents (#64748b). Dark theme uses deep charcoal backgrounds (#111827), dark grey paper (#1f2937), and light grey accents (#d1d5db). All secondary accent colors (cyan, violet) have been muted to match the professional aesthetic. Terminal window indicator dots now use the new accent palette. The sketch-card visual style (rotated cards, thick borders, shadows) is preserved. Selection color updated to muted slate with reduced opacity. All changes maintain WCAG AA contrast compliance.
+
+**Files touched:**
+- app/globals.css
+- tailwind.config.ts
+- components/hero-visual.tsx
+- components/terminal-panel.tsx
+- CHANGELOG.md
+
+**Reason:** Issue #46 — modernize color palette to reduce childish aesthetic and shift toward a refined, professional brand.
+
+**Author:** Anchorage Labs
+
 ### 2026-05-17 — Add compact proof-strip below the hero section
 
 **Intent:** A new proof-strip component appears immediately below the hero and above the About section, displaying three concise proof points grounded in existing site themes: open protocols and clear contracts, auditable automation and inspectable workflows, and developer tooling with operational discipline. The strip uses the existing sketch-card aesthetic with responsive grid layout (1 column on mobile, 3 columns on desktop), improving the homepage's first-scroll experience and reinforcing core organizational strengths.

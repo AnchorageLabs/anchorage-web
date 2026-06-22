@@ -24,15 +24,15 @@ export function HeroVisual() {
       </svg>
       {nodes.map((node) => (
         <div key={node.label} className="absolute rotate-[-2deg] rounded-2xl border-2 border-ink bg-[var(--paper)] px-4 py-3 font-mono text-xs font-black text-ink shadow-sketch" style={{ left: node.x, top: node.y }}>
-          <span className="mr-2 text-[#7d8f00]">●</span>
+          <span className="mr-2 text-[var(--accent)]">●</span>
           {node.label}
         </div>
       ))}
       <div className="absolute bottom-10 left-8 right-8 overflow-hidden rounded-[2rem] border-2 border-ink bg-[var(--terminal)] text-[var(--terminal-text)] shadow-[10px_10px_0_rgba(17,17,17,0.2)]">
         <div className="flex items-center gap-2 border-b-2 border-[var(--terminal-text)]/30 px-4 py-3">
-          <span className="h-3 w-3 rounded-full border border-[var(--terminal-text)] bg-[#ff6b6b]" />
-          <span className="h-3 w-3 rounded-full border border-[var(--terminal-text)] bg-[#ffd166]" />
+          <span className="h-3 w-3 rounded-full border border-[var(--terminal-text)] bg-[var(--accent-cyan)]" />
           <span className="h-3 w-3 rounded-full border border-[var(--terminal-text)] bg-[var(--accent)]" />
+          <span className="h-3 w-3 rounded-full border border-[var(--terminal-text)] bg-[var(--accent-violet)]" />
           <span className="ml-3 font-mono text-xs text-[var(--terminal-text)] opacity-60">anchorage-runner</span>
         </div>
         <div className="space-y-2 p-5 font-mono text-sm text-[var(--terminal-text)]">
