@@ -20,7 +20,6 @@ const nav = [
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-[var(--page-bg)] text-ink transition-colors duration-300">
-      <div className="grid-noise" />
       <header className="fixed left-0 right-0 top-0 z-50 border-b-2 border-ink/80 bg-[var(--paper-soft)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <a href="#top" className="flex items-center gap-3 group">
