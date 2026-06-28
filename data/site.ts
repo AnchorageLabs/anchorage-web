@@ -17,14 +17,14 @@ export const openSourceProjects = [
     technologies: ["Python 3.11+", "CLI", "TOML", "unittest", "GitHub Actions"],
   },
   {
-    name: "lighthouse",
-    url: "https://github.com/AnchorageLabs/lighthouse",
-    status: "Pre-v0 scaffold",
+    name: "cartographer",
+    url: "https://github.com/AnchorageLabs/cartographer",
+    status: "v0.1",
     accent: "cyan",
     summary:
-      "An onboarding assistant that explains repositories, maps important folders, ranks beginner-friendly issues, and guides first-time contributors toward a first PR.",
-    usefulFor: "Open source maintainers and new contributors who need faster, safer orientation inside unfamiliar codebases.",
-    technologies: ["Shell", "CLI concept", "GitHub", "Markdown", "Mermaid"],
+      "A local-first code context-graph tool. Builds an incremental tree-sitter symbol index (repo map, find references, impact, locate change, tests-for) and exposes it to AI agents over an MCP server — so agents stop burning tokens re-reading the repo.",
+    usefulFor: "Developers using AI coding tools (Claude Code, Cursor, Codex) who want their agent to query repo structure instead of grepping it.",
+    technologies: ["TypeScript", "tree-sitter", "SQLite", "MCP", "Node.js"],
   },
   {
     name: "chary",
@@ -110,8 +110,8 @@ export const stack = [
 ];
 
 export const analysisSummary = [
-  "Public/open source: anchorage, envy, lighthouse, chary.",
+  "Public/open source: anchorage, envy, cartographer, chary.",
   "Private/internal: anchorage-internal and anchorage-orchestrator.",
-  "Current stage: early development across the portfolio; anchorage is a pre-v0 reference implementation, lighthouse is a pre-v0 scaffold, envy is alpha, and chary is an early CLI scaffold.",
+  "Current stage: early development across the portfolio; anchorage is a pre-v0 reference implementation, cartographer is a v0.1 code context-graph tool, envy is alpha, and chary is an early CLI scaffold.",
   "Confirmed technical direction: protocol-first automation, CLI tooling, GitHub-centered workflows, explicit validation, reproducible local execution, and contributor-facing developer tools.",
 ];

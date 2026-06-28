@@ -25,7 +25,7 @@ Examples: "p95 plan→merge latency for issues labeled `agent-eligible`", "% of 
 -->
 
 - **Metric:** Number of confirmed Anchorage Labs public projects represented with accurate status, stack, links, and safe code/context.
-- **Current:** 4 public projects represented (`anchorage`, `envy`, `lighthouse`, `chary`).
+- **Current:** 4 public projects represented (`anchorage`, `envy`, `cartographer`, `chary`).
 - **Target (90d):** Every active public Anchorage Labs repo has an accurate landing-page representation within one week of meaningful status changes.
 
 ## Non-goals
