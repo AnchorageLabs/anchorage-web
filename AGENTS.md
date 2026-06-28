@@ -1,4 +1,4 @@
-# AGENTS.md — AnchorageLabs/anchorage-labs-web
+# AGENTS.md — AnchorageLabs/anchorage-web
 
 **Last updated:** 2026-05-11
 **Visibility:** private

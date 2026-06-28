@@ -1,4 +1,4 @@
-# SOUL.md — AnchorageLabs/anchorage-labs-web
+# SOUL.md — AnchorageLabs/anchorage-web
 
 > The north-star file. Locked schema — sections are not optional and not negotiable.
 > If a PR contradicts SOUL.md, the PR is wrong (or SOUL.md needs an explicit, dated revision).

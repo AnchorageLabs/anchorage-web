@@ -1,4 +1,4 @@
-# CHANGELOG — AnchorageLabs/anchorage-labs-web
+# CHANGELOG — AnchorageLabs/anchorage-web
 
 All substantive changes to this repo are recorded here. Format derived from Keep a Changelog, adapted for AnchorageLabs build discipline.
 
@@ -28,6 +28,21 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 ---
 
 ## [unreleased]
+
+### 2026-06-28 — Rename the repository anchorage-labs-web → anchorage-web
+
+**Intent:** The GitHub repository was renamed from `anchorage-labs-web` to `anchorage-web` (GitHub keeps an automatic redirect from the old name, so existing clones, remotes, and the Vercel Git integration — which tracks the repo by project/org ID — keep working). The repo's self-references are updated to match: the npm package name and the doc headers. No behavior, build, or deploy change.
+
+**Files touched:**
+- package.json
+- package-lock.json
+- AGENTS.md
+- SOUL.md
+- CHANGELOG.md
+
+**Reason:** repository rename requested by the maintainer (shorten to `anchorage-web`).
+
+**Author:** Sol Soletti
 
 ### 2026-05-17 — Add compact proof-strip below the hero section
 
