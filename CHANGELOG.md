@@ -29,6 +29,18 @@ All substantive changes to this repo are recorded here. Format derived from Keep
 
 ## [unreleased]
 
+### 2026-06-28 — Point the cartographer portfolio link at the renamed repo
+
+**Intent:** The Open Source card for cartographer now links to `github.com/AnchorageLabs/anchorage-cartographer` (the repo was renamed from `cartographer`). The old link still worked via GitHub's redirect; this updates it to the canonical URL.
+
+**Files touched:**
+- data/site.ts
+- CHANGELOG.md
+
+**Reason:** repository rename `cartographer` → `anchorage-cartographer`.
+
+**Author:** Sol Soletti
+
 ### 2026-06-28 — Rename the repository anchorage-labs-web → anchorage-web
 
 **Intent:** The GitHub repository was renamed from `anchorage-labs-web` to `anchorage-web` (GitHub keeps an automatic redirect from the old name, so existing clones, remotes, and the Vercel Git integration — which tracks the repo by project/org ID — keep working). The repo's self-references are updated to match: the npm package name and the doc headers. No behavior, build, or deploy change.

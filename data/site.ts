@@ -18,7 +18,7 @@ export const openSourceProjects = [
   },
   {
     name: "cartographer",
-    url: "https://github.com/AnchorageLabs/cartographer",
+    url: "https://github.com/AnchorageLabs/anchorage-cartographer",
     status: "v0.1",
     accent: "cyan",
     summary:
