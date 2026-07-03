@@ -1,26 +1,30 @@
+import { AwsLogo } from "@/components/aws-logo";
+import { CursorGlow } from "@/components/cursor-glow";
 import { Footer } from "@/components/footer";
 import { HeroVisual } from "@/components/hero-visual";
 import { OwnersSection } from "@/components/owners-section";
 import { ProductCard } from "@/components/product-card";
 import { ProofStrip } from "@/components/proof-strip";
+import { Reveal } from "@/components/reveal";
 import { Section } from "@/components/section";
 import { SiteNav } from "@/components/site-nav";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { organization, products, stack } from "@/data/site";
+import { aws, organization, products, stack } from "@/data/site";
 
 const nav = [
   { label: "Products", id: "products" },
+  { label: "AWS", id: "infrastructure" },
   { label: "About", id: "about" },
   { label: "Owners", id: "owners" },
-  { label: "Stack", id: "stack" },
 ];
 
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden text-[var(--ink)]">
       <div className="backdrop" />
+      <CursorGlow />
 
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--border)] bg-[color-mix(in_srgb,var(--page-bg)_80%,transparent)] backdrop-blur-xl">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--border)] bg-[color-mix(in_srgb,var(--page-bg)_72%,transparent)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5 lg:px-8">
           <a href="#top" className="group flex items-center gap-2.5">
             <span className="grid h-8 w-8 place-items-center rounded-lg border border-[var(--border-strong)] bg-[var(--surface-2)] font-mono text-xs font-bold text-[var(--accent)]">
@@ -40,17 +44,14 @@ export default function Home() {
 
       {/* Hero */}
       <section id="top" className="relative mx-auto grid min-h-screen max-w-7xl items-center gap-14 px-6 pb-16 pt-32 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
-        <div>
+        <div className="aurora" />
+        <Reveal>
           <div className="chip">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] glow-dot text-[var(--accent)]" />
             Developer-first software lab
           </div>
-          <h1 className="mt-6 text-5xl font-semibold leading-[1.03] tracking-[-0.045em] text-[var(--ink)] sm:text-6xl lg:text-7xl">
-            The state layer of{" "}
-            <span className="bg-gradient-to-r from-[var(--cartographer)] via-[var(--accent)] to-[var(--anchorage)] bg-clip-text text-transparent">
-              AI software engineering
-            </span>
-            .
+          <h1 className="mt-6 text-[2.75rem] font-semibold leading-[1.02] tracking-[-0.045em] text-[var(--ink)] sm:text-6xl lg:text-[4.5rem]">
+            The state layer of <span className="text-gradient">AI software engineering</span>.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted)]">
             Anchorage Labs builds the deterministic substrate coding agents run on: a machine-queryable map of every
@@ -72,8 +73,10 @@ export default function Home() {
               <span className="text-[var(--anchorage)]">●</span> Anchorage — the runtime
             </span>
           </div>
-        </div>
-        <HeroVisual />
+        </Reveal>
+        <Reveal delay={140}>
+          <HeroVisual />
+        </Reveal>
       </section>
 
       <ProofStrip />
@@ -92,6 +95,45 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Runs on AWS */}
+      <section id="infrastructure" className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+        <Reveal className="mb-12 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-2xl">
+            <p className="flex items-center gap-2.5 font-mono text-xs font-medium uppercase tracking-[0.28em] text-[var(--muted)]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#FF9900] glow-dot text-[#FF9900]" />
+              {aws.eyebrow}
+            </p>
+            <h2 className="mt-5 text-3xl font-semibold tracking-[-0.035em] text-[var(--ink)] sm:text-4xl lg:text-[3.25rem] lg:leading-[1.05]">
+              {aws.title}
+            </h2>
+            <p className="mt-5 text-base leading-8 text-[var(--muted)] sm:text-lg">{aws.intro}</p>
+          </div>
+          <div className="panel flex items-center gap-4 px-6 py-5">
+            <AwsLogo className="h-10 w-auto text-[var(--ink)]" />
+            <span className="h-10 w-px bg-[var(--border)]" />
+            <p className="font-mono text-xs leading-5 text-[var(--muted)]">
+              Amazon Web Services
+              <br />
+              powered platform
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal delay={80}>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {aws.services.map((service) => (
+              <div key={service.name} className="panel panel-hover p-5">
+                <div className="flex items-center gap-2.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#FF9900]" />
+                  <h3 className="font-mono text-sm font-semibold text-[var(--ink)]">{service.name}</h3>
+                </div>
+                <p className="mt-2.5 text-sm leading-6 text-[var(--muted)]">{service.role}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
       {/* About */}
       <Section
         id="about"
@@ -102,9 +144,9 @@ export default function Home() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {[
             { t: "Ground truth", d: "Deterministic maps and zero-LLM indexes give agents facts instead of guesses." },
-            { t: "Durable runtime", d: "Workflows survive restarts and are auditable end to end on Temporal." },
+            { t: "Durable runtime", d: "AWS-native workflows survive restarts and are auditable end to end." },
             { t: "Open-core boundary", d: "Protocol, SDK, runner, and the Cartographer engine are Apache-2.0." },
-            { t: "Operator-grade", d: "Built with explicit contracts, small composable tools, and inspectable behavior." },
+            { t: "Operator-grade", d: "Explicit contracts, small composable tools, and inspectable behavior." },
           ].map((item) => (
             <div key={item.t} className="panel panel-hover p-6">
               <h3 className="text-base font-semibold text-[var(--ink)]">{item.t}</h3>
@@ -129,7 +171,7 @@ export default function Home() {
         id="stack"
         eyebrow="Technical stack"
         title="Confirmed technologies across the repositories."
-        intro="Observed in the Anchorage, Cartographer, and orchestrator repositories — manifests, Dockerfiles, workflows, and project documentation."
+        intro="Observed in the Anchorage, Cartographer, and orchestrator repositories — manifests, Dockerfiles, CDK stacks, workflows, and project documentation."
       >
         <div className="flex flex-wrap gap-2.5">
           {stack.map((item) => (

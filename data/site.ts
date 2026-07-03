@@ -83,7 +83,7 @@ export const products: Product[] = [
     license: "Apache-2.0 (protocol)",
     url: "https://github.com/AnchorageLabs/anchorage",
     summary:
-      "Anchorage is an open protocol, TypeScript SDK, reference CLI runner, and MCP/A2A adapters for end-to-end software automation — plus the private orchestrator that consumes it. The orchestrator sequences CLI-first Anchorage agents into durable workflows on Temporal, from issue reading through PR, review, merge, and deploy.",
+      "Anchorage is an open protocol, TypeScript SDK, reference CLI runner, and MCP/A2A adapters for end-to-end software automation — plus the private orchestrator that consumes it. The orchestrator sequences CLI-first Anchorage agents into durable, auditable workflows on AWS, from issue reading through PR, review, merge, and deploy.",
     mission:
       "Turn GitHub issues into completed software changes by reliably sequencing Anchorage-compatible agents through the workflow runtime.",
     capabilities: [
@@ -93,14 +93,14 @@ export const products: Product[] = [
           "A wire-format spec, a TypeScript SDK, a reference runner (anchorage run <agent> < input.json), MCP and A2A adapters, and reference agents for issue reading, planning, coding, tests, PR opening, review, merge prep, and deploy observation — all Apache-2.0 so anyone can build agents that target an Anchorage-compatible orchestrator.",
       },
       {
-        title: "Durable workflows on Temporal",
+        title: "Durable, AWS-native execution",
         description:
-          "The private orchestrator wraps each step as a Temporal activity and the chain as a workflow. issue-to-code, issue-to-merge (pr.open → ci.watch → pr.review → merge.prepare → issue.close), issue-to-deploy, and Notion-sourced flows — with an HTTP API, worker, and trigger CLI.",
+          "The private orchestrator sequences each step and persists durable run state — steps, signals, token metrics — in Postgres on RDS. issue-to-code, issue-to-merge (pr.open → ci.watch → pr.review → merge.prepare → issue.close), issue-to-deploy, and Notion-sourced flows, served from ECS Fargate with an HTTP API, worker, and trigger CLI.",
       },
       {
         title: "Plans, decomposition & image briefs",
         description:
-          "Produce a reviewable plan and stop, or decompose it into a tracking epic plus dependency-ordered, cross-linked GitHub issues. Attach image briefs on vision-capable models. Pluggable providers: Anthropic, OpenAI, Moonshot/Kimi, Bedrock, and OpenAI-compatible gateways.",
+          "Produce a reviewable plan and stop, or decompose it into a tracking epic plus dependency-ordered, cross-linked GitHub issues. Attach image briefs on vision-capable models. Inference runs on Amazon Bedrock, with pluggable providers — Anthropic, OpenAI, Moonshot/Kimi, and OpenAI-compatible gateways.",
       },
     ],
     guarantees: [
@@ -166,11 +166,32 @@ export const owners = [
   },
 ];
 
+export const aws = {
+  eyebrow: "Runs on AWS",
+  title: "Engineered on AWS, provisioned as code.",
+  intro:
+    "The platform runs entirely on AWS. The orchestrator ships as containers on ECS Fargate, run state is durable in RDS Postgres, LLM inference is served from Amazon Bedrock, and every stack is defined and deployed with AWS CDK.",
+  services: [
+    { name: "Amazon Bedrock", role: "Managed LLM inference for planning, coding, and review agents." },
+    { name: "ECS Fargate", role: "Serverless containers running the orchestrator and agent workers." },
+    { name: "Amazon RDS · Postgres", role: "Durable run state — steps, signals, and token metrics." },
+    { name: "Amazon ECR", role: "Private registry for orchestrator and agent images." },
+    { name: "Amazon S3", role: "Artifact and workspace object storage." },
+    { name: "Amazon VPC", role: "Isolated network boundary for compute and data." },
+    { name: "CloudWatch", role: "Logs, metrics, and operational observability." },
+    { name: "Secrets Manager / SSM", role: "Provider keys and config, injected at runtime." },
+    { name: "AWS CDK · CloudFormation", role: "The whole platform as reviewable infrastructure code." },
+  ],
+};
+
 export const stack = [
   "TypeScript",
   "Node.js 22",
   "pnpm",
-  "Temporal",
+  "AWS CDK",
+  "ECS Fargate",
+  "Amazon Bedrock",
+  "RDS Postgres",
   "tree-sitter",
   "node:sqlite",
   "Python 3.11/3.12",
@@ -178,7 +199,4 @@ export const stack = [
   "Docker",
   "GitHub Actions",
   "MCP / A2A",
-  "JSON Schema",
-  "Biome",
-  "Vitest",
 ];

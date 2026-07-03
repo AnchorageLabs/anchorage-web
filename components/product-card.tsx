@@ -1,4 +1,5 @@
 import type { Product } from "@/data/site";
+import { GraphCanvas } from "@/components/graph-canvas";
 import { TerminalPanel } from "@/components/terminal-panel";
 
 const accentVar: Record<Product["accent"], string> = {
@@ -74,13 +75,23 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
         {/* Visual column */}
         <div className="space-y-4">
           <div
-            className="rounded-2xl border p-5"
+            className="relative overflow-hidden rounded-2xl border p-5"
             style={{ borderColor: "var(--border)", background: accentSoft }}
           >
-            <p className="font-mono text-xs uppercase tracking-[0.22em]" style={{ color: accent }}>
-              Mission
-            </p>
-            <p className="mt-2 text-lg font-medium leading-7 text-[var(--ink)]">{product.mission}</p>
+            {product.accent === "cartographer" ? (
+              <GraphCanvas
+                className="pointer-events-none absolute inset-0 h-full w-full opacity-70"
+                density={0.9}
+                interactive={false}
+                palette={["#4cc9ff", "#2ee9ff", "#8b93ff"]}
+              />
+            ) : null}
+            <div className="relative">
+              <p className="font-mono text-xs uppercase tracking-[0.22em]" style={{ color: accent }}>
+                Mission
+              </p>
+              <p className="mt-2 text-lg font-medium leading-7 text-[var(--ink)]">{product.mission}</p>
+            </div>
           </div>
 
           <TerminalPanel title={product.terminal.title} lines={product.terminal.lines} />

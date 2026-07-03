@@ -1,63 +1,57 @@
-const flow = [
-  { label: "repo", sub: "any codebase", tone: "muted" },
-  { label: "cartographer scan", sub: "→ symbolic map · zero LLM", tone: "cartographer" },
-  { label: "anchorage agents", sub: "plan · code · test", tone: "anchorage" },
-  { label: "orchestrator", sub: "durable workflow · Temporal", tone: "anchorage" },
-  { label: "pr → merge → deploy", sub: "issue.close ✓", tone: "accent" },
-];
+import { GraphCanvas } from "@/components/graph-canvas";
 
-const toneColor: Record<string, string> = {
-  muted: "var(--faint)",
-  cartographer: "var(--cartographer)",
-  anchorage: "var(--anchorage)",
-  accent: "var(--accent)",
-};
+const overlayNodes = [
+  { label: "buildRuntimePreview", x: "16%", y: "22%", tone: "var(--cartographer)" },
+  { label: "issue-to-merge", x: "62%", y: "16%", tone: "var(--anchorage)" },
+  { label: "cmd:test", x: "72%", y: "62%", tone: "var(--accent)" },
+  { label: "repo.context", x: "20%", y: "72%", tone: "var(--cartographer)" },
+];
 
 export function HeroVisual() {
   return (
     <div className="relative">
-      <div className="panel panel-accent float-slow p-6 sm:p-7" style={{ ["--accent-color" as string]: "var(--accent)" }}>
-        <div className="flex items-center justify-between">
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-[var(--muted)]">state layer</p>
+      <div className="panel panel-accent relative overflow-hidden" style={{ ["--accent-color" as string]: "var(--accent)" }}>
+        <div className="flex items-center justify-between border-b border-[var(--border)] px-5 py-3">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-[var(--muted)]">code graph</p>
           <span className="flex items-center gap-1.5 font-mono text-[11px] text-[var(--faint)]">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] glow-dot text-[var(--accent)]" />
-            live pipeline
+            1,516 symbols · 222 edges
           </span>
         </div>
 
-        <ol className="mt-6 space-y-3">
-          {flow.map((step, i) => (
-            <li key={step.label} className="relative">
-              <div
-                className="flex items-center gap-4 rounded-xl border border-[var(--border)] bg-[var(--surface-2)] px-4 py-3"
-                style={{ boxShadow: `inset 3px 0 0 ${toneColor[step.tone]}` }}
-              >
-                <span
-                  className="grid h-7 w-7 shrink-0 place-items-center rounded-md font-mono text-xs font-bold"
-                  style={{ color: toneColor[step.tone], background: "color-mix(in srgb, currentColor 12%, transparent)" }}
-                >
-                  {i + 1}
-                </span>
-                <div className="min-w-0">
-                  <p className="truncate font-mono text-sm font-semibold text-[var(--ink)]">{step.label}</p>
-                  <p className="truncate font-mono text-xs text-[var(--muted)]">{step.sub}</p>
-                </div>
-              </div>
-              {i < flow.length - 1 ? (
-                <span
-                  aria-hidden
-                  className="ml-[27px] block h-3 w-px"
-                  style={{ background: "var(--border-strong)" }}
-                />
-              ) : null}
-            </li>
+        <div className="relative h-[420px] sm:h-[480px]">
+          <GraphCanvas className="absolute inset-0 h-full w-full" density={1.15} />
+          {overlayNodes.map((node) => (
+            <span
+              key={node.label}
+              className="absolute -translate-x-1/2 -translate-y-1/2 rounded-md border border-[var(--border)] bg-[var(--surface-2)]/80 px-2.5 py-1 font-mono text-[11px] text-[var(--ink)] backdrop-blur-sm"
+              style={{ left: node.x, top: node.y, boxShadow: `0 0 0 1px ${node.tone}22` }}
+            >
+              <span className="mr-1.5" style={{ color: node.tone }}>
+                ●
+              </span>
+              {node.label}
+            </span>
           ))}
-        </ol>
+        </div>
+
+        <div className="grid grid-cols-3 divide-x divide-[var(--border)] border-t border-[var(--border)] font-mono text-xs">
+          {[
+            { k: "map", v: "deterministic" },
+            { k: "index", v: "0 LLM tokens" },
+            { k: "runtime", v: "AWS-native" },
+          ].map((cell) => (
+            <div key={cell.k} className="px-4 py-3">
+              <p className="text-[var(--faint)]">{cell.k}</p>
+              <p className="mt-0.5 text-[var(--ink)]">{cell.v}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-8 -top-8 -z-10 h-40 w-40 rounded-full blur-3xl"
+        className="pointer-events-none absolute -right-10 -top-10 -z-10 h-48 w-48 rounded-full blur-3xl"
         style={{ background: "var(--glow)" }}
       />
     </div>
