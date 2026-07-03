@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Anchorage Labs | The state layer of AI software engineering",
   description:
     "Anchorage Labs builds Cartographer, a deterministic map of every repository, and Anchorage, a protocol-driven runtime that sequences coding agents from issue to merged, deployed change.",
+  icons: { icon: "/anchoragelabs-icon-gradient-512.png" },
   metadataBase: new URL("https://github.com/AnchorageLabs"),
   openGraph: {
     title: "Anchorage Labs",
