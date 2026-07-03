@@ -1,40 +1,11 @@
-import { GraphCanvas } from "@/components/graph-canvas";
+import { GalaxyCanvas } from "@/components/galaxy-canvas";
 
-type OverlayNode = {
-  label: string;
-  x: string;
-  y: string;
-  tone: string;
-};
-
-const overlayNodes: OverlayNode[] = [
-  { label: "auth::gateway", x: "10%", y: "14%", tone: "var(--cartographer)" },
-  { label: "session::store", x: "4%", y: "36%", tone: "var(--cartographer)" },
-  { label: "token::issuer", x: "13%", y: "58%", tone: "var(--accent)" },
-  { label: "event::bus", x: "38%", y: "8%", tone: "var(--accent)" },
-  { label: "scheduler::v2", x: "50%", y: "28%", tone: "var(--anchorage)" },
-  { label: "dispatcher", x: "34%", y: "52%", tone: "var(--anchorage)" },
-  { label: "archives/2024", x: "78%", y: "14%", tone: "var(--cartographer)" },
-  { label: "db::schema", x: "88%", y: "36%", tone: "var(--accent)" },
-  { label: "storage::engine", x: "74%", y: "60%", tone: "var(--anchorage)" },
-  { label: "api::router", x: "24%", y: "78%", tone: "var(--cartographer)" },
-  { label: "sync::worker", x: "58%", y: "76%", tone: "var(--accent)" },
-  { label: "policy::engine", x: "50%", y: "62%", tone: "var(--cartographer)" },
+const clusterLabels = [
+  { label: "auth::gateway", x: "22%", y: "28%" },
+  { label: "event::bus", x: "58%", y: "22%" },
+  { label: "archives", x: "38%", y: "62%" },
+  { label: "storage::engine", x: "76%", y: "55%" },
 ];
-
-const overlayEdges: [number, number][] = [
-  [0, 1], [0, 2], [1, 2],
-  [3, 4], [3, 5], [4, 5],
-  [6, 7], [6, 8], [7, 8],
-  [0, 3], [2, 5], [5, 8],
-  [4, 1], [4, 7],
-  [2, 9], [5, 11], [8, 10],
-  [9, 4], [9, 10],
-  [11, 5], [11, 10],
-];
-
-const nodeX = (node: OverlayNode) => parseFloat(node.x);
-const nodeY = (node: OverlayNode) => parseFloat(node.y);
 
 export function HeroVisual() {
   return (
@@ -54,43 +25,21 @@ export function HeroVisual() {
         </div>
 
         <div className="relative h-[420px] sm:h-[480px]">
-          <GraphCanvas
+          <GalaxyCanvas
             className="absolute inset-0 h-full w-full"
-            density={1.35}
+            density={1.25}
           />
-          <svg
-            className="absolute inset-0 h-full w-full pointer-events-none"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-            aria-hidden
-          >
-            {overlayEdges.map(([a, b], i) => (
-              <line
-                key={i}
-                x1={nodeX(overlayNodes[a])}
-                y1={nodeY(overlayNodes[a])}
-                x2={nodeX(overlayNodes[b])}
-                y2={nodeY(overlayNodes[b])}
-                stroke="var(--border)"
-                strokeOpacity="0.35"
-                strokeWidth="0.35"
-                strokeDasharray={i % 4 === 0 ? "1.5 2.5" : undefined}
-              />
-            ))}
-          </svg>
-          {overlayNodes.map((node) => (
+          {clusterLabels.map((node) => (
             <span
               key={node.label}
-              className="absolute -translate-x-1/2 -translate-y-1/2 rounded-md border border-[var(--border)] bg-[var(--surface-2)] px-2.5 py-1 font-mono text-[11px] text-[var(--ink)] backdrop-blur-sm"
+              className="absolute -translate-x-1/2 -translate-y-1/2 font-mono text-[10px] tracking-wider pointer-events-none select-none"
               style={{
                 left: node.x,
                 top: node.y,
-                boxShadow: `0 0 0 1px ${node.tone}22`,
+                color: "var(--faint)",
+                textShadow: "0 0 8px var(--accent)",
               }}
             >
-              <span className="mr-1.5" style={{ color: node.tone }}>
-                ●
-              </span>
               {node.label}
             </span>
           ))}
