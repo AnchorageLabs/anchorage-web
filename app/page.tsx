@@ -59,7 +59,6 @@ export default function Home() {
           <h1 className="mt-6 text-[2.75rem] font-semibold leading-[1.02] tracking-[-0.045em] text-[var(--ink)] sm:text-6xl lg:text-[4.5rem]">
             The map and runtime for{" "}
             <span className="text-gradient">autonomous software delivery.</span>
-            .
           </h1>
           <p className="mt-6 max-w-md text-lg leading-8 text-[var(--muted)]">
             A deterministic map of every repository, and a runtime that takes an
