@@ -17,10 +17,12 @@ export function GraphCanvas({ className = "", density = 1, interactive = true, p
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const canvas = ref.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+    const canvasRef = ref.current;
+    if (!canvasRef) return;
+    const ctxRef = canvasRef.getContext("2d");
+    if (!ctxRef) return;
+    const canvas: HTMLCanvasElement = canvasRef;
+    const ctx: CanvasRenderingContext2D = ctxRef;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);

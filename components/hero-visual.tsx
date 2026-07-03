@@ -24,7 +24,7 @@ export function HeroVisual() {
           {overlayNodes.map((node) => (
             <span
               key={node.label}
-              className="absolute -translate-x-1/2 -translate-y-1/2 rounded-md border border-[var(--border)] bg-[var(--surface-2)]/80 px-2.5 py-1 font-mono text-[11px] text-[var(--ink)] backdrop-blur-sm"
+              className="absolute -translate-x-1/2 -translate-y-1/2 rounded-md border border-[var(--border)] bg-[var(--surface-2)] px-2.5 py-1 font-mono text-[11px] text-[var(--ink)] backdrop-blur-sm"
               style={{ left: node.x, top: node.y, boxShadow: `0 0 0 1px ${node.tone}22` }}
             >
               <span className="mr-1.5" style={{ color: node.tone }}>
