@@ -20,8 +20,8 @@ type Particle = {
 };
 
 const PALETTE_HUES = [190, 200, 210, 220];
-const CONNECTION_DIST = 108;
-const MOUSE_RADIUS = 130;
+const CONNECTION_DIST = 150;
+const MOUSE_RADIUS = 160;
 
 export function GalaxyCanvas({ className = "", density = 1, interactive = true }: GalaxyCanvasProps) {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -52,14 +52,14 @@ export function GalaxyCanvas({ className = "", density = 1, interactive = true }
       c2d.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       const clusterCount = 4;
-      const perCluster = Math.round(14 * density);
-      const freeCount = Math.round(10 * density);
+      const perCluster = Math.round(20 * density);
+      const freeCount = Math.round(12 * density);
 
       const clusters: { x: number; y: number }[] = [
-        { x: width * 0.22, y: height * 0.28 },
-        { x: width * 0.58, y: height * 0.22 },
-        { x: width * 0.38, y: height * 0.62 },
-        { x: width * 0.76, y: height * 0.55 },
+        { x: width * 0.18, y: height * 0.22 },
+        { x: width * 0.72, y: height * 0.18 },
+        { x: width * 0.28, y: height * 0.72 },
+        { x: width * 0.78, y: height * 0.72 },
       ];
 
       particles = [];
@@ -68,14 +68,14 @@ export function GalaxyCanvas({ className = "", density = 1, interactive = true }
         const cl = clusters[c];
         for (let i = 0; i < perCluster; i++) {
           const angle = Math.random() * Math.PI * 2;
-          const baseRadius = 14 + Math.random() * 62;
+          const baseRadius = 30 + Math.random() * 110;
           particles.push({
             cx: cl.x,
             cy: cl.y,
             angle,
             radius: baseRadius,
             speed: (0.0003 + Math.random() * 0.0008) * (Math.random() > 0.5 ? 1 : -1),
-            size: 0.6 + Math.random() * 2.2,
+            size: 0.8 + Math.random() * 2.6,
             alpha: 0.25 + Math.random() * 0.55,
             hue: PALETTE_HUES[Math.floor(Math.random() * PALETTE_HUES.length)],
           });
@@ -132,7 +132,7 @@ export function GalaxyCanvas({ className = "", density = 1, interactive = true }
           const d = Math.hypot(dx, dy);
           if (d < CONNECTION_DIST) {
             const strength = 1 - d / CONNECTION_DIST;
-            c2d.globalAlpha = strength * 0.28;
+            c2d.globalAlpha = strength * 0.35;
             c2d.strokeStyle = `hsl(${particles[i].hue}, 70%, 68%)`;
             c2d.lineWidth = 0.4;
             c2d.beginPath();
@@ -150,7 +150,7 @@ export function GalaxyCanvas({ className = "", density = 1, interactive = true }
         c2d.globalAlpha = p.alpha * twinkle;
         c2d.fillStyle = `hsl(${p.hue}, 80%, 72%)`;
         c2d.shadowColor = `hsl(${p.hue}, 80%, 65%)`;
-        c2d.shadowBlur = p.size * 4;
+        c2d.shadowBlur = p.size * 6;
         c2d.beginPath();
         c2d.arc(pos.x, pos.y, p.size, 0, Math.PI * 2);
         c2d.fill();

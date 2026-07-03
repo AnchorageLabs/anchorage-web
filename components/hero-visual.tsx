@@ -1,10 +1,10 @@
 import { GalaxyCanvas } from "@/components/galaxy-canvas";
 
 const clusterLabels = [
-  { label: "auth::gateway", x: "22%", y: "28%" },
-  { label: "event::bus", x: "58%", y: "22%" },
-  { label: "archives", x: "38%", y: "62%" },
-  { label: "storage::engine", x: "76%", y: "55%" },
+  { label: "auth::gateway", x: "18%", y: "22%" },
+  { label: "event::bus", x: "72%", y: "18%" },
+  { label: "archives", x: "28%", y: "72%" },
+  { label: "storage::engine", x: "78%", y: "72%" },
 ];
 
 export function HeroVisual() {
@@ -27,7 +27,7 @@ export function HeroVisual() {
         <div className="relative h-[420px] sm:h-[480px]">
           <GalaxyCanvas
             className="absolute inset-0 h-full w-full"
-            density={1.25}
+            density={1.5}
           />
           {clusterLabels.map((node) => (
             <span
