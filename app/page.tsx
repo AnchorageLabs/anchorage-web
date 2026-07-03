@@ -1,4 +1,3 @@
-import { AwsLogo } from "@/components/aws-logo";
 import { CursorGlow } from "@/components/cursor-glow";
 import { Footer } from "@/components/footer";
 import { HeroVisual } from "@/components/hero-visual";
@@ -8,7 +7,6 @@ import { ProofStrip } from "@/components/proof-strip";
 import { Reveal } from "@/components/reveal";
 import { Section } from "@/components/section";
 import { SiteNav } from "@/components/site-nav";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { aws, organization, products, stack } from "@/data/site";
 
 const nav = [
@@ -27,18 +25,19 @@ export default function Home() {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--border)] bg-[color-mix(in_srgb,var(--page-bg)_72%,transparent)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5 lg:px-8">
           <a href="#top" className="group flex items-center gap-2.5">
-            <span className="grid h-8 w-8 place-items-center rounded-lg border border-[var(--border-strong)] bg-[var(--surface-2)] font-mono text-xs font-bold text-[var(--accent)]">
-              AL
-            </span>
+            <img
+              src="/anchoragelabs-icon-gradient-512.png"
+              alt="Anchorage Labs"
+              className="h-8 w-8 rounded-lg"
+              width={32}
+              height={32}
+            />
             <span className="text-sm font-semibold tracking-tight text-[var(--ink)]">Anchorage Labs</span>
           </a>
           <SiteNav items={nav} />
-          <div className="flex items-center gap-2.5">
-            <ThemeToggle />
-            <a href={organization.github} className="btn btn-ghost px-4 py-2 text-sm">
-              GitHub
-            </a>
-          </div>
+          <a href={organization.github} className="btn btn-ghost px-4 py-2 text-sm">
+            GitHub
+          </a>
         </div>
       </header>
 
@@ -48,14 +47,13 @@ export default function Home() {
         <Reveal>
           <div className="chip">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] glow-dot text-[var(--accent)]" />
-            Developer-first software lab
+            Software infrastructure lab
           </div>
           <h1 className="mt-6 text-[2.75rem] font-semibold leading-[1.02] tracking-[-0.045em] text-[var(--ink)] sm:text-6xl lg:text-[4.5rem]">
             The state layer of <span className="text-gradient">AI software engineering</span>.
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted)]">
-            Anchorage Labs builds the deterministic substrate coding agents run on: a machine-queryable map of every
-            repository, and a protocol-driven runtime that carries an issue all the way to a merged, deployed change.
+          <p className="mt-6 max-w-md text-lg leading-8 text-[var(--muted)]">
+            A deterministic map of every repository, and a runtime that takes an issue to a merged, deployed change.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a href="#products" className="btn btn-primary">
@@ -109,12 +107,13 @@ export default function Home() {
             <p className="mt-5 text-base leading-8 text-[var(--muted)] sm:text-lg">{aws.intro}</p>
           </div>
           <div className="panel flex items-center gap-4 px-6 py-5">
-            <AwsLogo className="h-10 w-auto text-[var(--ink)]" />
-            <span className="h-10 w-px bg-[var(--border)]" />
+            <span className="grid place-items-center rounded-xl bg-white px-4 py-3">
+              <img src="/png-transparent-aws-hd-logo.png" alt="Amazon Web Services" className="h-9 w-auto" width={90} height={54} />
+            </span>
             <p className="font-mono text-xs leading-5 text-[var(--muted)]">
-              Amazon Web Services
+              Powered by
               <br />
-              powered platform
+              Amazon Web Services
             </p>
           </div>
         </Reveal>
