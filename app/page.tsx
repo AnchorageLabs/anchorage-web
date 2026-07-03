@@ -31,17 +31,25 @@ export default function Home() {
               width={32}
               height={32}
             />
-            <span className="text-sm font-semibold tracking-tight text-[var(--ink)]">Anchorage Labs</span>
+            <span className="text-sm font-semibold tracking-tight text-[var(--ink)]">
+              Anchorage Labs
+            </span>
           </a>
           <SiteNav items={nav} />
-          <a href={organization.github} className="btn btn-ghost px-4 py-2 text-sm">
+          <a
+            href={organization.github}
+            className="btn btn-ghost px-4 py-2 text-sm"
+          >
             GitHub
           </a>
         </div>
       </header>
 
       {/* Hero */}
-      <section id="top" className="relative mx-auto grid min-h-screen max-w-7xl items-center gap-14 px-6 pb-16 pt-32 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
+      <section
+        id="top"
+        className="relative mx-auto grid min-h-screen max-w-7xl items-center gap-14 px-6 pb-16 pt-32 lg:grid-cols-[1.05fr_0.95fr] lg:px-8"
+      >
         <div className="aurora" />
         <Reveal>
           <div className="chip">
@@ -49,10 +57,13 @@ export default function Home() {
             Software infrastructure lab
           </div>
           <h1 className="mt-6 text-[2.75rem] font-semibold leading-[1.02] tracking-[-0.045em] text-[var(--ink)] sm:text-6xl lg:text-[4.5rem]">
-            The state layer of <span className="text-gradient">AI software engineering</span>.
+            The map and runtime for{" "}
+            <span className="text-gradient">autonomous software delivery.</span>
+            .
           </h1>
           <p className="mt-6 max-w-md text-lg leading-8 text-[var(--muted)]">
-            A deterministic map of every repository, and a runtime that takes an issue to a merged, deployed change.
+            A deterministic map of every repository, and a runtime that takes an
+            issue to a merged, deployed change.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a href="#products" className="btn btn-primary">
@@ -64,10 +75,12 @@ export default function Home() {
           </div>
           <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 font-mono text-xs text-[var(--faint)]">
             <span>
-              <span className="text-[var(--cartographer)]">●</span> Cartographer — the map
+              <span className="text-[var(--cartographer)]">●</span> Cartographer
+              — the map
             </span>
             <span>
-              <span className="text-[var(--anchorage)]">●</span> Anchorage — the runtime
+              <span className="text-[var(--anchorage)]">●</span> Anchorage — the
+              runtime
             </span>
           </div>
         </Reveal>
@@ -93,7 +106,10 @@ export default function Home() {
       </Section>
 
       {/* Runs on AWS */}
-      <section id="infrastructure" className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+      <section
+        id="infrastructure"
+        className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28"
+      >
         <Reveal className="mb-12 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <p className="flex items-center gap-2.5 font-mono text-xs font-medium uppercase tracking-[0.28em] text-[var(--muted)]">
@@ -103,11 +119,19 @@ export default function Home() {
             <h2 className="mt-5 text-3xl font-semibold tracking-[-0.035em] text-[var(--ink)] sm:text-4xl lg:text-[3.25rem] lg:leading-[1.05]">
               {aws.title}
             </h2>
-            <p className="mt-5 text-base leading-8 text-[var(--muted)] sm:text-lg">{aws.intro}</p>
+            <p className="mt-5 text-base leading-8 text-[var(--muted)] sm:text-lg">
+              {aws.intro}
+            </p>
           </div>
           <div className="panel flex items-center gap-4 px-6 py-5">
             <span className="grid place-items-center rounded-xl bg-white px-4 py-3">
-              <img src="/png-transparent-aws-hd-logo.png" alt="Amazon Web Services" className="h-9 w-auto" width={90} height={54} />
+              <img
+                src="/png-transparent-aws-hd-logo.png"
+                alt="Amazon Web Services"
+                className="h-9 w-auto"
+                width={90}
+                height={54}
+              />
             </span>
             <p className="font-mono text-xs leading-5 text-[var(--muted)]">
               Powered by
@@ -123,9 +147,13 @@ export default function Home() {
               <div key={service.name} className="panel panel-hover p-5">
                 <div className="flex items-center gap-2.5">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#FF9900]" />
-                  <h3 className="font-mono text-sm font-semibold text-[var(--ink)]">{service.name}</h3>
+                  <h3 className="font-mono text-sm font-semibold text-[var(--ink)]">
+                    {service.name}
+                  </h3>
                 </div>
-                <p className="mt-2.5 text-sm leading-6 text-[var(--muted)]">{service.role}</p>
+                <p className="mt-2.5 text-sm leading-6 text-[var(--muted)]">
+                  {service.role}
+                </p>
               </div>
             ))}
           </div>
@@ -141,14 +169,30 @@ export default function Home() {
       >
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {[
-            { t: "Ground truth", d: "Deterministic maps and zero-LLM indexes give agents facts instead of guesses." },
-            { t: "Durable runtime", d: "AWS-native workflows survive restarts and are auditable end to end." },
-            { t: "Open-core boundary", d: "Protocol, SDK, runner, and the Cartographer engine are Apache-2.0." },
-            { t: "Operator-grade", d: "Explicit contracts, small composable tools, and inspectable behavior." },
+            {
+              t: "Ground truth",
+              d: "Deterministic maps and zero-LLM indexes give agents facts instead of guesses.",
+            },
+            {
+              t: "Durable runtime",
+              d: "AWS-native workflows survive restarts and are auditable end to end.",
+            },
+            {
+              t: "Open-core boundary",
+              d: "Protocol, SDK, runner, and the Cartographer engine are Apache-2.0.",
+            },
+            {
+              t: "Operator-grade",
+              d: "Explicit contracts, small composable tools, and inspectable behavior.",
+            },
           ].map((item) => (
             <div key={item.t} className="panel panel-hover p-6">
-              <h3 className="text-base font-semibold text-[var(--ink)]">{item.t}</h3>
-              <p className="mt-3 text-sm leading-6 text-[var(--muted)]">{item.d}</p>
+              <h3 className="text-base font-semibold text-[var(--ink)]">
+                {item.t}
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                {item.d}
+              </p>
             </div>
           ))}
         </div>
