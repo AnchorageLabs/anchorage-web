@@ -29,9 +29,10 @@ export function GalaxyCanvas({ className = "", density = 1, interactive = true }
   useEffect(() => {
     const canvas = ref.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
     const el: HTMLCanvasElement = canvas;
+    const ctx = el.getContext("2d");
+    if (!ctx) return;
+    const c2d: CanvasRenderingContext2D = ctx;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -48,7 +49,7 @@ export function GalaxyCanvas({ className = "", density = 1, interactive = true }
       height = rect.height;
       el.width = Math.max(1, Math.floor(width * dpr));
       el.height = Math.max(1, Math.floor(height * dpr));
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      c2d.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       const clusterCount = 4;
       const perCluster = Math.round(14 * density);
@@ -105,7 +106,7 @@ export function GalaxyCanvas({ className = "", density = 1, interactive = true }
     }
 
     function frame() {
-      ctx.clearRect(0, 0, width, height);
+      c2d.clearRect(0, 0, width, height);
       const positions: { x: number; y: number }[] = [];
 
       for (const p of particles) {
@@ -131,13 +132,13 @@ export function GalaxyCanvas({ className = "", density = 1, interactive = true }
           const d = Math.hypot(dx, dy);
           if (d < CONNECTION_DIST) {
             const strength = 1 - d / CONNECTION_DIST;
-            ctx.globalAlpha = strength * 0.28;
-            ctx.strokeStyle = `hsl(${particles[i].hue}, 70%, 68%)`;
-            ctx.lineWidth = 0.4;
-            ctx.beginPath();
-            ctx.moveTo(positions[i].x, positions[i].y);
-            ctx.lineTo(positions[j].x, positions[j].y);
-            ctx.stroke();
+            c2d.globalAlpha = strength * 0.28;
+            c2d.strokeStyle = `hsl(${particles[i].hue}, 70%, 68%)`;
+            c2d.lineWidth = 0.4;
+            c2d.beginPath();
+            c2d.moveTo(positions[i].x, positions[i].y);
+            c2d.lineTo(positions[j].x, positions[j].y);
+            c2d.stroke();
           }
         }
       }
@@ -146,32 +147,32 @@ export function GalaxyCanvas({ className = "", density = 1, interactive = true }
         const p = particles[i];
         const pos = positions[i];
         const twinkle = 0.6 + Math.sin(time * 0.03 + i) * 0.4;
-        ctx.globalAlpha = p.alpha * twinkle;
-        ctx.fillStyle = `hsl(${p.hue}, 80%, 72%)`;
-        ctx.shadowColor = `hsl(${p.hue}, 80%, 65%)`;
-        ctx.shadowBlur = p.size * 4;
-        ctx.beginPath();
-        ctx.arc(pos.x, pos.y, p.size, 0, Math.PI * 2);
-        ctx.fill();
+        c2d.globalAlpha = p.alpha * twinkle;
+        c2d.fillStyle = `hsl(${p.hue}, 80%, 72%)`;
+        c2d.shadowColor = `hsl(${p.hue}, 80%, 65%)`;
+        c2d.shadowBlur = p.size * 4;
+        c2d.beginPath();
+        c2d.arc(pos.x, pos.y, p.size, 0, Math.PI * 2);
+        c2d.fill();
       }
-      ctx.shadowBlur = 0;
-      ctx.globalAlpha = 1;
+      c2d.shadowBlur = 0;
+      c2d.globalAlpha = 1;
 
       if (interactive && mouse.active) {
         for (let i = 0; i < particles.length; i++) {
           const d = Math.hypot(positions[i].x - mouse.x, positions[i].y - mouse.y);
           if (d < CONNECTION_DIST * 1.4) {
             const strength = 1 - d / (CONNECTION_DIST * 1.4);
-            ctx.globalAlpha = strength * 0.35;
-            ctx.strokeStyle = `hsl(${particles[i].hue}, 80%, 70%)`;
-            ctx.lineWidth = 0.5;
-            ctx.beginPath();
-            ctx.moveTo(positions[i].x, positions[i].y);
-            ctx.lineTo(mouse.x, mouse.y);
-            ctx.stroke();
+            c2d.globalAlpha = strength * 0.35;
+            c2d.strokeStyle = `hsl(${particles[i].hue}, 80%, 70%)`;
+            c2d.lineWidth = 0.5;
+            c2d.beginPath();
+            c2d.moveTo(positions[i].x, positions[i].y);
+            c2d.lineTo(mouse.x, mouse.y);
+            c2d.stroke();
           }
         }
-        ctx.globalAlpha = 1;
+        c2d.globalAlpha = 1;
       }
 
       time++;
