@@ -11,7 +11,6 @@ import { aws, organization, products, stack } from "@/data/site";
 
 const nav = [
   { label: "Products", id: "products" },
-  { label: "AWS", id: "infrastructure" },
   { label: "About", id: "about" },
   { label: "Owners", id: "owners" },
 ];
