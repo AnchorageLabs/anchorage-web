@@ -1,25 +1,30 @@
-import { openSourceProjects, organization } from "@/data/site";
+import { organization, products } from "@/data/site";
 
 export function Footer() {
   return (
     <footer className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8">
-      <div className="sketch-card bg-[var(--paper)] p-8">
+      <div className="panel overflow-hidden p-8 sm:p-10">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
-          <div>
-            <h2 className="text-2xl font-black tracking-[-0.03em] text-ink">Anchorage Labs</h2>
-            <p className="mt-3 max-w-xl text-sm font-medium leading-6 text-ink/65">
-              Useful systems, clear protocols, developer-first tools. Founder-led and currently in early development.
-            </p>
+          <div className="max-w-xl">
+            <div className="flex items-center gap-2.5">
+              <span className="h-2 w-2 rounded-full bg-[var(--accent)] glow-dot text-[var(--accent)]" />
+              <h2 className="text-xl font-semibold tracking-[-0.02em] text-[var(--ink)]">Anchorage Labs</h2>
+            </div>
+            <p className="mt-3 text-sm leading-6 text-[var(--muted)]">{organization.tagline} Founder-led, built in the open, and in early development.</p>
           </div>
-          <div className="flex flex-wrap gap-3 text-sm font-black text-ink">
-            <a href={organization.github} className="rounded-full border-2 border-ink bg-[var(--paper)] px-4 py-2 shadow-sketch transition hover:-translate-y-0.5">GitHub organization</a>
-            {openSourceProjects.map((project) => (
-              <a key={project.name} href={project.url} className="rounded-full border-2 border-ink bg-[var(--paper)] px-4 py-2 shadow-sketch transition hover:-translate-y-0.5">{project.name}</a>
+          <div className="flex flex-wrap gap-2.5 text-sm">
+            <a href={organization.github} className="chip transition hover:-translate-y-0.5 hover:text-[var(--ink)]">GitHub org</a>
+            {products.map((product) => (
+              <a key={product.id} href={product.url} className="chip transition hover:-translate-y-0.5 hover:text-[var(--ink)]">
+                {product.name}
+              </a>
             ))}
-            <a href="#top" className="rounded-full border-2 border-ink bg-[var(--paper)] px-4 py-2 shadow-sketch transition hover:-translate-y-0.5">Back to top ↑</a>
+            <a href="#top" className="chip transition hover:-translate-y-0.5 hover:text-[var(--ink)]">Back to top ↑</a>
           </div>
         </div>
-        <p className="mt-6 text-sm font-medium text-ink/65">Built in the open by Anchorage Labs.</p>
+        <p className="mt-8 border-t border-[var(--border)] pt-6 font-mono text-xs text-[var(--faint)]">
+          © {new Date().getFullYear()} Anchorage Labs · The state layer of AI software engineering
+        </p>
       </div>
     </footer>
   );

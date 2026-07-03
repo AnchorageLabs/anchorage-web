@@ -1,17 +1,26 @@
-export function TerminalPanel({ lines }: { lines: string[] }) {
+type Line = { text: string; kind?: "cmd" | "out" | "ok" | "dim" };
+
+const kindClass: Record<string, string> = {
+  cmd: "text-[var(--terminal-text)]",
+  out: "text-[var(--terminal-text)]/85",
+  dim: "text-[var(--terminal-text)]/45",
+  ok: "text-[var(--accent)]",
+};
+
+export function TerminalPanel({ title, lines }: { title: string; lines: Line[] }) {
   return (
-    <div className="overflow-hidden rounded-[2rem] border-2 border-ink bg-[var(--terminal)] shadow-[10px_10px_0_rgba(17,17,17,0.18)]">
-      <div className="flex items-center gap-2 border-b-2 border-[var(--terminal-text)]/25 px-5 py-4">
-        <span className="h-3 w-3 rounded-full border border-[var(--terminal-text)] bg-[#ff6b6b]" />
-        <span className="h-3 w-3 rounded-full border border-[var(--terminal-text)] bg-[#ffd166]" />
-        <span className="h-3 w-3 rounded-full border border-[var(--terminal-text)] bg-[var(--accent)]" />
-        <span className="ml-3 font-mono text-xs text-[var(--terminal-text)] opacity-55">analysis.log</span>
+    <div className="overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--terminal)] shadow-[0_30px_60px_-30px_rgba(0,0,0,0.9)]">
+      <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
+        <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
+        <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
+        <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
+        <span className="ml-2 font-mono text-xs text-[var(--terminal-text)]/50">{title}</span>
       </div>
-      <div className="space-y-4 p-6 font-mono text-sm leading-7">
+      <div className="space-y-2 p-5 font-mono text-[13px] leading-6">
         {lines.map((line, index) => (
-          <p key={line} className="text-[var(--terminal-text)] opacity-85">
-            <span className="mr-3 text-[var(--accent)]">{String(index + 1).padStart(2, "0")}</span>
-            {line}
+          <p key={`${line.text}-${index}`} className={kindClass[line.kind ?? "out"]}>
+            {line.kind === "cmd" ? <span className="mr-1 text-[var(--accent)]">›</span> : null}
+            {line.text.replace(/^\$\s/, "")}
           </p>
         ))}
       </div>

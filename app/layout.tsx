@@ -8,20 +8,20 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetBrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
 export const metadata: Metadata = {
-  title: "Anchorage Labs | Developer tools and software infrastructure",
+  title: "Anchorage Labs | The state layer of AI software engineering",
   description:
-    "Anchorage Labs builds developer-first tooling, open source automation, protocols, CLIs, and infrastructure for modern software teams.",
+    "Anchorage Labs builds Cartographer, a deterministic map of every repository, and Anchorage, a protocol-driven runtime that sequences coding agents from issue to merged, deployed change.",
   metadataBase: new URL("https://github.com/AnchorageLabs"),
   openGraph: {
     title: "Anchorage Labs",
-    description: "Developer-first tools, infrastructure, automation, and open source systems.",
+    description: "The state layer of AI software engineering — Cartographer and Anchorage.",
     type: "website",
   },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" data-theme="dark">
       <body className={`${inter.variable} ${jetBrains.variable} bg-[var(--page-bg)] font-sans text-ink antialiased`}>
         {children}
         <BackToTopButton />

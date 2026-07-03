@@ -10,15 +10,16 @@ type SectionProps = {
 
 export function Section({ id, eyebrow, title, intro, children }: SectionProps) {
   return (
-    <section id={id} className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8">
-      <div className="mb-12 max-w-3xl">
-        <p className="font-mono text-sm font-black uppercase tracking-[0.28em] text-ink/55">{eyebrow}</p>
-        <div className="relative mt-4">
-          <div className="absolute -left-3 top-0 h-8 w-5 border-l-2 border-t-2 border-[var(--accent,#dff06b)] opacity-60 pointer-events-none sm:-left-6" />
-          <h2 className="text-3xl font-black tracking-[-0.05em] text-ink sm:text-5xl">{title}</h2>
-        </div>
-        <div className="mt-5 h-1.5 w-20 rounded-full bg-[var(--accent)]" />
-        <p className="mt-5 text-base font-medium leading-8 text-ink/65 sm:text-lg">{intro}</p>
+    <section id={id} className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+      <div className="mb-14 max-w-3xl">
+        <p className="flex items-center gap-2.5 font-mono text-xs font-semibold uppercase tracking-[0.28em] text-[var(--muted)]">
+          <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] glow-dot text-[var(--accent)]" />
+          {eyebrow}
+        </p>
+        <h2 className="mt-5 text-3xl font-semibold tracking-[-0.03em] text-[var(--ink)] sm:text-4xl lg:text-5xl">
+          {title}
+        </h2>
+        <p className="mt-5 text-base leading-8 text-[var(--muted)] sm:text-lg">{intro}</p>
       </div>
       {children}
     </section>
