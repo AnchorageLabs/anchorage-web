@@ -1,3 +1,4 @@
+import { CountUp } from "@/components/count-up";
 import { GalaxyCanvas } from "@/components/galaxy-canvas";
 
 const clusterLabels = [
@@ -11,7 +12,7 @@ export function HeroVisual() {
   return (
     <div className="relative">
       <div
-        className="panel panel-accent relative overflow-hidden"
+        className="panel border-flow relative overflow-hidden"
         style={{ ["--accent-color" as string]: "var(--accent)" }}
       >
         <div className="flex items-center justify-between border-b border-[var(--border)] px-5 py-3">
@@ -20,7 +21,8 @@ export function HeroVisual() {
           </p>
           <span className="flex items-center gap-1.5 font-mono text-[11px] text-[var(--faint)]">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] glow-dot text-[var(--accent)]" />
-            2,847 symbols · 412 edges
+            <CountUp to={2847} className="text-[var(--muted)]" /> symbols ·{" "}
+            <CountUp to={412} className="text-[var(--muted)]" /> edges
           </span>
         </div>
 

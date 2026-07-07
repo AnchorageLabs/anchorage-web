@@ -1,3 +1,4 @@
+import { Anchor, Check, Compass } from "lucide-react";
 import type { Product } from "@/data/site";
 import { GraphCanvas } from "@/components/graph-canvas";
 import { TerminalPanel } from "@/components/terminal-panel";
@@ -12,9 +13,15 @@ const accentSoftVar: Record<Product["accent"], string> = {
   anchorage: "var(--anchorage-soft)",
 };
 
+const productIcon: Record<Product["accent"], typeof Compass> = {
+  cartographer: Compass,
+  anchorage: Anchor,
+};
+
 export function ProductCard({ product, index }: { product: Product; index: number }) {
   const accent = accentVar[product.accent];
   const accentSoft = accentSoftVar[product.accent];
+  const ProductIcon = productIcon[product.accent];
   const reversed = index % 2 === 1;
 
   return (
@@ -37,9 +44,17 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
             <span className="chip">{product.visibility}</span>
           </div>
 
-          <h3 className="mt-5 text-4xl font-semibold tracking-[-0.03em] text-[var(--ink)] sm:text-5xl">
-            {product.name}
-          </h3>
+          <div className="mt-5 flex items-center gap-3.5">
+            <span
+              className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border"
+              style={{ borderColor: accent, color: accent, background: accentSoft }}
+            >
+              <ProductIcon size={24} strokeWidth={1.75} />
+            </span>
+            <h3 className="text-4xl font-semibold tracking-[-0.03em] text-[var(--ink)] sm:text-5xl">
+              {product.name}
+            </h3>
+          </div>
           <p className="mt-3 text-lg font-medium" style={{ color: accent }}>
             {product.tagline}
           </p>
@@ -62,13 +77,10 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
           </ul>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a href={product.url} className="btn btn-primary" style={{ background: accent }}>
-              View on GitHub
-              <span aria-hidden>↗</span>
+            <a href={product.cta.href} className="btn btn-primary" style={{ background: accent }}>
+              {product.cta.label}
+              <span aria-hidden>{product.cta.href.startsWith("/") ? "→" : "↗"}</span>
             </a>
-            <span className="chip font-mono">
-              {product.status} · {product.license}
-            </span>
           </div>
         </div>
 
@@ -99,9 +111,7 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
           <ul className="grid gap-2">
             {product.guarantees.map((g) => (
               <li key={g} className="flex items-start gap-2.5 text-sm leading-6 text-[var(--muted)]">
-                <span style={{ color: accent }} aria-hidden>
-                  ✓
-                </span>
+                <Check size={16} strokeWidth={2.5} className="mt-0.5 shrink-0" style={{ color: accent }} aria-hidden />
                 {g}
               </li>
             ))}

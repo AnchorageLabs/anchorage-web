@@ -11,8 +11,8 @@ type SectionProps = {
 
 export function Section({ id, eyebrow, title, intro, children }: SectionProps) {
   return (
-    <section id={id} className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-      <Reveal className="mb-14 max-w-3xl">
+    <section id={id} className="relative mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
+      <Reveal className="mb-9 max-w-3xl">
         <p className="flex items-center gap-2.5 font-mono text-xs font-medium uppercase tracking-[0.28em] text-[var(--muted)]">
           <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] glow-dot text-[var(--accent)]" />
           {eyebrow}

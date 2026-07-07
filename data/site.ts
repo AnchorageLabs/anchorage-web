@@ -21,6 +21,7 @@ export type Product = {
   capabilities: { title: string; description: string }[];
   guarantees: string[];
   terminal: { title: string; lines: { text: string; kind?: "cmd" | "out" | "ok" | "dim" }[] };
+  cta: { label: string; href: string };
 };
 
 export const products: Product[] = [
@@ -30,10 +31,10 @@ export const products: Product[] = [
     kicker: "The map",
     tagline: "Charts a repo before anyone sails it.",
     accent: "cartographer",
-    visibility: "Open source",
+    visibility: "Private beta · HalleyScore",
     status: "v0.1",
-    license: "Apache-2.0",
-    url: "https://github.com/AnchorageLabs/anchorage-cartographer",
+    license: "Invite-only",
+    url: "/cartographer",
     summary:
       "Scans a repository into a symbolic, machine-queryable context artifact — so agents and humans never re-discover a repo with ls, grep, and cat.",
     mission: "Any agent productive in any repo within one file read.",
@@ -66,6 +67,7 @@ export const products: Product[] = [
         { text: "blast radius resolved — zero LLM tokens", kind: "ok" },
       ],
     },
+    cta: { label: "Installation guide", href: "/cartographer" },
   },
   {
     id: "anchorage",
@@ -108,6 +110,7 @@ export const products: Product[] = [
         { text: "issue.close  ✓  workflow complete", kind: "ok" },
       ],
     },
+    cta: { label: "View on GitHub", href: "https://github.com/AnchorageLabs/anchorage" },
   },
 ];
 
@@ -117,23 +120,49 @@ export const principles = [
   { title: "Open-core boundary", description: "Protocol, SDK, and the map are open. Orchestration stays private." },
 ];
 
-export const aws = {
-  eyebrow: "Runs on AWS",
-  title: "Engineered on AWS, provisioned as code.",
-  intro:
-    "Containers on ECS Fargate, durable state in RDS Postgres, inference on Amazon Bedrock — every stack defined with AWS CDK.",
-  services: [
-    { name: "Amazon Bedrock", role: "Managed LLM inference for the agents." },
-    { name: "ECS Fargate", role: "Serverless containers for orchestrator and workers." },
-    { name: "Amazon RDS · Postgres", role: "Durable run state, steps, and metrics." },
-    { name: "Amazon ECR", role: "Private registry for images." },
-    { name: "Amazon S3", role: "Artifact and workspace storage." },
-    { name: "Amazon VPC", role: "Isolated network boundary." },
-    { name: "CloudWatch", role: "Logs, metrics, observability." },
-    { name: "Secrets Manager / SSM", role: "Keys and config at runtime." },
-    { name: "AWS CDK · CloudFormation", role: "Infrastructure as reviewable code." },
-  ],
-};
+// Agents / editors that speak MCP and can query the Cartographer graph.
+export const worksWith = [
+  "Claude Code",
+  "Cursor",
+  "Codex",
+  "GitHub",
+  "MCP",
+  "VS Code",
+  "Windsurf",
+  "Zed",
+];
+
+export const pipeline: {
+  step: string;
+  title: string;
+  accent: "accent" | "cartographer" | "anchorage";
+  desc: string;
+}[] = [
+  {
+    step: "01",
+    title: "Issue",
+    accent: "accent",
+    desc: "A GitHub issue lands — a bug, a feature, a task to complete.",
+  },
+  {
+    step: "02",
+    title: "Map",
+    accent: "cartographer",
+    desc: "Cartographer charts the repo into a deterministic context graph — zero LLM tokens.",
+  },
+  {
+    step: "03",
+    title: "Sequence",
+    accent: "anchorage",
+    desc: "Anchorage sequences agents through durable, inspectable steps: plan, code, test, review.",
+  },
+  {
+    step: "04",
+    title: "Ship",
+    accent: "accent",
+    desc: "A reviewed change is merged and deployed, with run state auditable end to end.",
+  },
+];
 
 export const owners = [
   {
@@ -160,19 +189,35 @@ export const owners = [
   },
 ];
 
+// Grounded in a scan of the anchorage, cartographer, orchestrator, and infra repos
+// (package manifests, Dockerfiles, CDK stacks, and SQL migrations).
 export const stack = [
   "TypeScript",
   "Node.js 22",
-  "pnpm",
-  "AWS CDK",
-  "ECS Fargate",
-  "Amazon Bedrock",
-  "RDS Postgres",
+  "Next.js",
+  "React",
+  "Vite",
   "tree-sitter",
   "node:sqlite",
-  "Python",
-  "Next.js",
+  "PostgreSQL",
+  "Zod",
+  "AJV · JSON Schema",
+  "MCP / A2A",
+  "Express",
+  "Biome",
+  "Vitest",
+  "Jest",
   "Docker",
   "GitHub Actions",
-  "MCP / A2A",
+];
+
+// AWS services confirmed across infra (CDK) and the orchestrator (@aws-sdk, pg → RDS,
+// Dockerfiles → ECS/Fargate, Bedrock inference).
+export const awsStack = [
+  "AWS CDK",
+  "Amazon Bedrock",
+  "ECS Fargate",
+  "Amazon RDS · Postgres",
+  "Amazon S3",
+  "Amazon ECR",
 ];

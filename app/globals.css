@@ -227,6 +227,91 @@ main > header {
   }
 }
 
+/* Marquee (works-with strip) */
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 34s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pipeline connector with a travelling gradient */
+.flow-line {
+  position: relative;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--border);
+}
+.flow-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  transform: translateX(-100%);
+  animation: flow 2.6s linear infinite;
+}
+@keyframes flow {
+  to {
+    transform: translateX(200%);
+  }
+}
+
+/* Animated gradient border (hero panel) */
+@property --bf-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.border-flow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--bf-angle),
+    transparent 0deg,
+    var(--cartographer) 60deg,
+    var(--accent) 120deg,
+    var(--anchorage) 200deg,
+    transparent 300deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.55;
+  pointer-events: none;
+  animation: border-rotate 7s linear infinite;
+}
+@keyframes border-rotate {
+  to {
+    --bf-angle: 360deg;
+  }
+}
+
+/* Soft accent glow on hover */
+.glow-hover {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+.glow-hover:hover {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 30%, transparent),
+    0 18px 50px -24px color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
