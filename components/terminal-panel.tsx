@@ -1,9 +1,9 @@
 type Line = { text: string; kind?: "cmd" | "out" | "ok" | "dim" };
 
 const kindClass: Record<string, string> = {
-  cmd: "text-[var(--terminal-text)]",
-  out: "text-[var(--terminal-text)]/85",
-  dim: "text-[var(--terminal-text)]/45",
+  cmd: "text-[#d7e6ea]",
+  out: "text-[#d7e6ea]/85",
+  dim: "text-[#d7e6ea]/45",
   ok: "text-[var(--accent)]",
 };
 
@@ -14,7 +14,7 @@ export function TerminalPanel({ title, lines }: { title: string; lines: Line[] }
         <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
         <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
         <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
-        <span className="ml-2 font-mono text-xs text-[var(--terminal-text)]/50">{title}</span>
+        <span className="ml-2 font-mono text-xs text-[#d7e6ea]/50">{title}</span>
       </div>
       <div className="space-y-2 p-5 font-mono text-[13px] leading-6">
         {lines.map((line, index) => (

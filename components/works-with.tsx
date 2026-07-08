@@ -1,3 +1,5 @@
+"use client";
+
 import {
   SiClaude,
   SiCursor,
@@ -8,6 +10,7 @@ import {
   SiWindsurf,
   SiZedindustries,
 } from "@icons-pack/react-simple-icons";
+import { useT } from "@/components/language-provider";
 
 const tools = [
   { name: "GitHub", Icon: SiGithub },
@@ -22,11 +25,12 @@ const tools = [
 
 export function WorksWith() {
   const items = [...tools, ...tools];
+  const label = useT().worksWithLabel;
 
   return (
     <section className="relative mx-auto max-w-7xl px-6 py-6 lg:px-8">
       <p className="text-center font-mono text-xs uppercase tracking-[0.28em] text-[var(--faint)]">
-        Works with the agents your team already uses
+        {label}
       </p>
       <div className="marquee-mask mt-5 overflow-hidden">
         <div className="marquee-track">

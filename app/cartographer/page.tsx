@@ -24,6 +24,7 @@ import { CursorGlow } from "@/components/cursor-glow";
 import { Footer } from "@/components/footer";
 import { GuideToc } from "@/components/guide-toc";
 import { ScrollProgress } from "@/components/scroll-progress";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
   title: "Cartographer — Developer setup | Anchorage Labs",
@@ -120,10 +121,20 @@ export default function CartographerSetup() {
             <span className="text-[var(--faint)]">/</span>
             <span className="hidden text-sm text-[var(--muted)] sm:inline">Cartographer setup</span>
           </a>
-          <a href="/" className="btn btn-ghost px-4 py-2 text-sm">
-            <ArrowLeft size={15} />
-            Back to site
-          </a>
+          <div className="flex items-center gap-2.5">
+            <ThemeToggle />
+            <a
+              href="https://app.anchoragelabs.dev"
+              className="btn btn-primary !hidden px-4 py-2 text-sm sm:!inline-flex"
+            >
+              Open app
+              <span aria-hidden>↗</span>
+            </a>
+            <a href="/" className="btn btn-ghost px-4 py-2 text-sm">
+              <ArrowLeft size={15} />
+              <span className="hidden sm:inline">Back to site</span>
+            </a>
+          </div>
         </div>
       </header>
 

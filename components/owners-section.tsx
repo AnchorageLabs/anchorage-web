@@ -1,9 +1,16 @@
-import { owners } from "@/data/site";
+"use client";
+
+import { useT } from "@/components/language-provider";
+import { owners as ownersData } from "@/data/site";
 
 export function OwnersSection() {
+  const t = useT();
+  const focusLabel = t.labels.focus;
+  const people = ownersData.map((o, i) => ({ ...o, ...t.owners[i] }));
+
   return (
     <div className="grid gap-6 lg:grid-cols-2">
-      {owners.map((owner) => (
+      {people.map((owner) => (
         <article key={owner.name} className="panel panel-hover overflow-hidden p-7">
           <div className="flex flex-col gap-6 sm:flex-row">
             <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl border border-[var(--border-strong)]">
@@ -23,7 +30,7 @@ export function OwnersSection() {
               </div>
               <p className="mt-4 text-sm leading-6 text-[var(--muted)]">{owner.summary}</p>
               <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
-                <span className="font-semibold text-[var(--ink)]">Focus:</span> {owner.focus}
+                <span className="font-semibold text-[var(--ink)]">{focusLabel}:</span> {owner.focus}
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {owner.signals.map((signal) => (

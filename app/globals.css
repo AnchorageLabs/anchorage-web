@@ -167,6 +167,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  white-space: nowrap;
   border-radius: 9999px;
   padding: 0.7rem 1.4rem;
   font-size: 0.875rem;
@@ -197,6 +198,17 @@ body {
 
 .glow-dot {
   box-shadow: 0 0 12px 1px currentColor;
+}
+
+/* AWS logo swaps with theme: white mark on dark, dark mark on light */
+.aws-logo-on-light {
+  display: none;
+}
+[data-theme="light"] .aws-logo-on-dark {
+  display: none;
+}
+[data-theme="light"] .aws-logo-on-light {
+  display: inline-block;
 }
 
 .text-gradient {

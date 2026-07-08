@@ -1,5 +1,8 @@
+"use client";
+
 import { GitFork, RefreshCw, Target, TerminalSquare } from "lucide-react";
 import { GraphCanvas } from "@/components/graph-canvas";
+import { useT } from "@/components/language-provider";
 
 function IconBadge({ children, color }: { children: React.ReactNode; color: string }) {
   return (
@@ -13,6 +16,7 @@ function IconBadge({ children, color }: { children: React.ReactNode; color: stri
 }
 
 export function BentoAbout() {
+  const b = useT().bento;
   return (
     <div className="grid gap-4 lg:grid-cols-3">
       {/* Feature tile */}
@@ -28,24 +32,21 @@ export function BentoAbout() {
             <Target size={20} strokeWidth={1.75} />
           </IconBadge>
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-[var(--cartographer)]">
-            Ground truth
+            {b.feature.eyebrow}
           </p>
           <h3 className="mt-2 max-w-md text-2xl font-semibold tracking-[-0.02em] text-[var(--ink)]">
-            Facts before guesses.
+            {b.feature.title}
           </h3>
-          <p className="mt-3 max-w-md text-sm leading-6 text-[var(--muted)]">
-            Deterministic maps and zero-LLM indexes give agents ground truth about a
-            repository — byte-identical on every run.
-          </p>
+          <p className="mt-3 max-w-md text-sm leading-6 text-[var(--muted)]">{b.feature.desc}</p>
           <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 font-mono text-xs text-[var(--faint)]">
             <span>
-              <span className="text-[var(--ink)]">25+</span> languages
+              <span className="text-[var(--ink)]">25+</span> {b.feature.stats[0]}
             </span>
             <span>
-              <span className="text-[var(--ink)]">0</span> LLM tokens
+              <span className="text-[var(--ink)]">0</span> {b.feature.stats[1]}
             </span>
             <span>
-              <span className="text-[var(--ink)]">1</span> file read
+              <span className="text-[var(--ink)]">1</span> {b.feature.stats[2]}
             </span>
           </div>
         </div>
@@ -56,13 +57,9 @@ export function BentoAbout() {
         <IconBadge color="var(--anchorage)">
           <RefreshCw size={20} strokeWidth={1.75} />
         </IconBadge>
-        <p className="font-mono text-xs uppercase tracking-[0.24em] text-[var(--anchorage)]">
-          Durable runtime
-        </p>
-        <h3 className="mt-2 text-lg font-semibold text-[var(--ink)]">Survives restarts.</h3>
-        <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
-          AWS-native workflows persist every step and stay auditable from issue to deploy.
-        </p>
+        <p className="font-mono text-xs uppercase tracking-[0.24em] text-[var(--anchorage)]">{b.durable.eyebrow}</p>
+        <h3 className="mt-2 text-lg font-semibold text-[var(--ink)]">{b.durable.title}</h3>
+        <p className="mt-3 text-sm leading-6 text-[var(--muted)]">{b.durable.desc}</p>
       </div>
 
       {/* Open-core */}
@@ -70,13 +67,9 @@ export function BentoAbout() {
         <IconBadge color="var(--accent)">
           <GitFork size={20} strokeWidth={1.75} />
         </IconBadge>
-        <p className="font-mono text-xs uppercase tracking-[0.24em] text-[var(--accent)]">
-          Open-core boundary
-        </p>
-        <h3 className="mt-2 text-lg font-semibold text-[var(--ink)]">Open where it counts.</h3>
-        <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
-          Protocol, SDK, runner, and the Cartographer engine are Apache-2.0.
-        </p>
+        <p className="font-mono text-xs uppercase tracking-[0.24em] text-[var(--accent)]">{b.opencore.eyebrow}</p>
+        <h3 className="mt-2 text-lg font-semibold text-[var(--ink)]">{b.opencore.title}</h3>
+        <p className="mt-3 text-sm leading-6 text-[var(--muted)]">{b.opencore.desc}</p>
       </div>
 
       {/* Operator-grade */}
@@ -86,21 +79,14 @@ export function BentoAbout() {
             <IconBadge color="var(--muted)">
               <TerminalSquare size={20} strokeWidth={1.75} />
             </IconBadge>
-            <p className="font-mono text-xs uppercase tracking-[0.24em] text-[var(--muted)]">
-              Operator-grade
-            </p>
-            <h3 className="mt-2 text-lg font-semibold text-[var(--ink)]">
-              Explicit contracts, inspectable behavior.
-            </h3>
-            <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
-              Small composable tools with typed boundaries — you can see exactly what
-              ran and why.
-            </p>
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-[var(--muted)]">{b.operator.eyebrow}</p>
+            <h3 className="mt-2 text-lg font-semibold text-[var(--ink)]">{b.operator.title}</h3>
+            <p className="mt-3 text-sm leading-6 text-[var(--muted)]">{b.operator.desc}</p>
           </div>
           <div className="shrink-0 rounded-xl border border-[var(--border)] bg-[var(--terminal)] p-4 font-mono text-xs leading-6">
             <p className="text-[var(--faint)]">$ anchorage runs show</p>
-            <p className="text-[var(--terminal-text)]/85">step plan&nbsp;&nbsp;ok&nbsp;&nbsp;1.2s</p>
-            <p className="text-[var(--terminal-text)]/85">step code&nbsp;&nbsp;ok&nbsp;&nbsp;8.4s</p>
+            <p className="text-[#d7e6ea]/85">step plan&nbsp;&nbsp;ok&nbsp;&nbsp;1.2s</p>
+            <p className="text-[#d7e6ea]/85">step code&nbsp;&nbsp;ok&nbsp;&nbsp;8.4s</p>
             <p className="text-[var(--accent)]">step tests ok&nbsp;&nbsp;passed</p>
           </div>
         </div>

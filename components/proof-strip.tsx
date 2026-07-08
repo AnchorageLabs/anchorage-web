@@ -1,10 +1,13 @@
+"use client";
+
 import { Blocks, Fingerprint, ScanSearch } from "lucide-react";
-import { principles } from "@/data/site";
+import { useT } from "@/components/language-provider";
 
 const icons = [Fingerprint, ScanSearch, Blocks];
 const iconColors = ["var(--cartographer)", "var(--accent)", "var(--anchorage)"];
 
 export function ProofStrip() {
+  const principles = useT().principles;
   return (
     <section className="relative mx-auto max-w-7xl px-6 py-6 lg:px-8">
       <div className="grid gap-4 md:grid-cols-3">

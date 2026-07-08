@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import type { ReactNode } from "react";
 import { BackToTopButton } from "@/components/back-to-top-button";
+import { LanguageProvider } from "@/components/language-provider";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -28,12 +29,22 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en" data-theme="dark">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var t=localStorage.getItem('anchorage-theme');document.documentElement.dataset.theme=(t==='light'||t==='dark')?t:'dark';var l=localStorage.getItem('anchorage-lang');if(l==='es'||l==='en')document.documentElement.lang=l;}catch(e){document.documentElement.dataset.theme='dark';}})();",
+          }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${jetBrains.variable} bg-[var(--page-bg)] font-sans text-ink antialiased`}
       >
-        {children}
-        <BackToTopButton />
+        <LanguageProvider>
+          {children}
+          <BackToTopButton />
+        </LanguageProvider>
       </body>
     </html>
   );

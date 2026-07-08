@@ -1,8 +1,12 @@
+"use client";
+
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { BentoAbout } from "@/components/bento-about";
 import { CursorGlow } from "@/components/cursor-glow";
 import { Footer } from "@/components/footer";
 import { HeroVisual } from "@/components/hero-visual";
+import { LangToggle } from "@/components/lang-toggle";
+import { useT } from "@/components/language-provider";
 import { Magnetic } from "@/components/magnetic";
 import { OwnersSection } from "@/components/owners-section";
 import { Pipeline } from "@/components/pipeline";
@@ -12,17 +16,19 @@ import { Reveal } from "@/components/reveal";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { Section } from "@/components/section";
 import { SiteNav } from "@/components/site-nav";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { WorksWith } from "@/components/works-with";
 import { awsStack, organization, products, stack } from "@/data/site";
 
-const nav = [
-  { label: "Products", id: "products" },
-  { label: "How it works", id: "how" },
-  { label: "About", id: "about" },
-  { label: "Owners", id: "owners" },
-];
-
 export default function Home() {
+  const t = useT();
+  const mergedProducts = products.map((p, i) => ({
+    ...p,
+    ...t.products[i],
+    missionLabel: t.labels.mission,
+    cta: { href: p.cta.href, label: t.products[i].ctaLabel },
+  }));
+
   return (
     <main className="relative min-h-screen overflow-hidden text-[var(--ink)]">
       <div className="backdrop" />
@@ -39,18 +45,32 @@ export default function Home() {
               width={32}
               height={32}
             />
-            <span className="text-sm font-semibold tracking-tight text-[var(--ink)]">
+            <span className="hidden whitespace-nowrap text-sm font-semibold tracking-tight text-[var(--ink)] sm:inline">
               Anchorage Labs
             </span>
           </a>
-          <SiteNav items={nav} />
-          <a
-            href={organization.github}
-            className="btn btn-ghost px-4 py-2 text-sm"
-          >
-            <SiGithub size={16} />
-            GitHub
-          </a>
+          <SiteNav items={t.nav} />
+          <div className="flex items-center gap-2.5">
+            <LangToggle />
+            <ThemeToggle />
+            <a
+              href={organization.github}
+              aria-label="GitHub"
+              className="hidden h-9 w-9 place-items-center rounded-full border border-[var(--border-strong)] bg-[var(--surface-2)] text-[var(--muted)] transition hover:-translate-y-0.5 hover:text-[var(--ink)] md:grid"
+            >
+              <SiGithub size={16} />
+            </a>
+            <a href="/cartographer" className="btn btn-ghost !hidden px-4 py-2 text-sm md:!inline-flex">
+              {t.install}
+            </a>
+            <a
+              href="https://app.anchoragelabs.dev"
+              className="btn btn-primary px-4 py-2 text-sm"
+            >
+              {t.openApp}
+              <span aria-hidden>↗</span>
+            </a>
+          </div>
         </div>
       </header>
 
@@ -63,37 +83,32 @@ export default function Home() {
         <Reveal>
           <div className="chip">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] glow-dot text-[var(--accent)]" />
-            Software infrastructure lab
+            {t.hero.badge}
           </div>
           <h1 className="mt-6 text-[2.75rem] font-semibold leading-[1.02] tracking-[-0.045em] text-[var(--ink)] sm:text-6xl lg:text-[4.5rem]">
-            The map and runtime for{" "}
-            <span className="text-gradient">autonomous software delivery.</span>
+            {t.hero.titleLead}
+            <span className="text-gradient">{t.hero.titleAccent}</span>
           </h1>
-          <p className="mt-6 max-w-md text-lg leading-8 text-[var(--muted)]">
-            A deterministic map of every repository, and a runtime that takes an
-            issue to a merged, deployed change.
-          </p>
+          <p className="mt-6 max-w-md text-lg leading-8 text-[var(--muted)]">{t.hero.subtitle}</p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Magnetic>
               <a href="#products" className="btn btn-primary">
-                Explore the products
+                {t.hero.ctaProducts}
               </a>
             </Magnetic>
             <Magnetic>
               <a href={organization.github} className="btn btn-ghost">
                 <SiGithub size={16} />
-                View on GitHub
+                {t.hero.ctaGithub}
               </a>
             </Magnetic>
           </div>
           <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 font-mono text-xs text-[var(--faint)]">
             <span>
-              <span className="text-[var(--cartographer)]">●</span> Cartographer
-              — the map
+              <span className="text-[var(--cartographer)]">●</span> {t.hero.legendCartographer}
             </span>
             <span>
-              <span className="text-[var(--anchorage)]">●</span> Anchorage — the
-              runtime
+              <span className="text-[var(--anchorage)]">●</span> {t.hero.legendAnchorage}
             </span>
           </div>
         </Reveal>
@@ -109,54 +124,34 @@ export default function Home() {
       {/* Products */}
       <Section
         id="products"
-        eyebrow="Products"
-        title="Two products. One workflow."
-        intro="Cartographer charts the ground so agents know where they are. Anchorage sequences those agents through durable workflows from issue to deploy. Together they are the map and the engine of autonomous software delivery."
+        eyebrow={t.sections.products.eyebrow}
+        title={t.sections.products.title}
+        intro={t.sections.products.intro}
       >
         <div className="space-y-5">
-          {products.map((product, index) => (
+          {mergedProducts.map((product, index) => (
             <ProductCard key={product.id} product={product} index={index} />
           ))}
         </div>
       </Section>
 
       {/* How it works */}
-      <Section
-        id="how"
-        eyebrow="How it works"
-        title="Issue in. Merged, deployed change out."
-        intro="Cartographer charts the ground so agents know where they are. Anchorage sequences those agents through durable steps — from a fresh issue to a reviewed change in production."
-      >
+      <Section id="how" eyebrow={t.sections.how.eyebrow} title={t.sections.how.title} intro={t.sections.how.intro}>
         <Pipeline />
       </Section>
 
       {/* About */}
-      <Section
-        id="about"
-        eyebrow="About"
-        title="Precise systems, not demos."
-        intro="Anchorage Labs is an independent, founder-led organization building useful technical products: backend systems, infrastructure, automation, and the open source primitives beneath them."
-      >
+      <Section id="about" eyebrow={t.sections.about.eyebrow} title={t.sections.about.title} intro={t.sections.about.intro}>
         <BentoAbout />
       </Section>
 
       {/* Owners */}
-      <Section
-        id="owners"
-        eyebrow="Owners"
-        title="Founder-led by systems builders."
-        intro="Anchorage Labs is led by Sol Soletti and Valentin Torassa Colombero, whose public work points at the same center of gravity as the organization: developer tools, backend systems, infrastructure, and automation."
-      >
+      <Section id="owners" eyebrow={t.sections.owners.eyebrow} title={t.sections.owners.title} intro={t.sections.owners.intro}>
         <OwnersSection />
       </Section>
 
       {/* Stack */}
-      <Section
-        id="stack"
-        eyebrow="Technical stack"
-        title="Confirmed technologies across the repositories."
-        intro="Observed in the Anchorage, Cartographer, and orchestrator repositories — manifests, Dockerfiles, CDK stacks, workflows, and project documentation."
-      >
+      <Section id="stack" eyebrow={t.sections.stack.eyebrow} title={t.sections.stack.title} intro={t.sections.stack.intro}>
         <div className="space-y-8">
           <div className="flex flex-wrap gap-2.5">
             {stack.map((item) => (
@@ -176,16 +171,21 @@ export default function Home() {
                   <img
                     src="/aws-logo-white.png"
                     alt="Amazon Web Services"
-                    className="h-7 w-auto"
+                    className="aws-logo-on-dark h-7 w-auto"
+                    width={112}
+                    height={68}
+                  />
+                  <img
+                    src="/png-transparent-aws-hd-logo.png"
+                    alt="Amazon Web Services"
+                    className="aws-logo-on-light h-7 w-auto"
                     width={112}
                     height={68}
                   />
                 </span>
                 <div>
-                  <p className="text-base font-semibold text-[var(--ink)]">Built on AWS</p>
-                  <p className="mt-0.5 font-mono text-xs text-[var(--muted)]">
-                    Provisioned as code with AWS CDK
-                  </p>
+                  <p className="text-base font-semibold text-[var(--ink)]">{t.aws.title}</p>
+                  <p className="mt-0.5 font-mono text-xs text-[var(--muted)]">{t.aws.subtitle}</p>
                 </div>
               </div>
               <div className="flex flex-wrap gap-2.5">

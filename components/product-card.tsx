@@ -18,7 +18,7 @@ const productIcon: Record<Product["accent"], typeof Compass> = {
   anchorage: Anchor,
 };
 
-export function ProductCard({ product, index }: { product: Product; index: number }) {
+export function ProductCard({ product, index }: { product: Product & { missionLabel?: string }; index: number }) {
   const accent = accentVar[product.accent];
   const accentSoft = accentSoftVar[product.accent];
   const ProductIcon = productIcon[product.accent];
@@ -100,7 +100,7 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
             ) : null}
             <div className="relative">
               <p className="font-mono text-xs uppercase tracking-[0.22em]" style={{ color: accent }}>
-                Mission
+                {product.missionLabel ?? "Mission"}
               </p>
               <p className="mt-2 text-lg font-medium leading-7 text-[var(--ink)]">{product.mission}</p>
             </div>

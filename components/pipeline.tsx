@@ -1,5 +1,8 @@
+"use client";
+
 import { CircleDot, Rocket, Waypoints, Workflow } from "lucide-react";
-import { pipeline } from "@/data/site";
+import { useT } from "@/components/language-provider";
+import { pipeline as pipelineData } from "@/data/site";
 
 const colorVar: Record<string, string> = {
   accent: "var(--accent)",
@@ -10,19 +13,22 @@ const colorVar: Record<string, string> = {
 const icons = [CircleDot, Waypoints, Workflow, Rocket];
 
 export function Pipeline() {
+  const t = useT();
+  const steps = pipelineData.map((p, i) => ({ ...p, ...t.pipeline[i] }));
+
   return (
     <div className="grid gap-4 lg:grid-cols-4">
-      {pipeline.map((s, i) => {
+      {steps.map((s, i) => {
         const color = colorVar[s.accent];
         const Icon = icons[i] ?? CircleDot;
         return (
           <div key={s.step} className="relative">
-            {i < pipeline.length - 1 ? (
+            {i < steps.length - 1 ? (
               <div
                 aria-hidden
                 className="absolute top-[45px] right-[-16px] z-10 hidden h-0.5 w-4 rounded-full lg:block"
                 style={{
-                  background: `linear-gradient(90deg, ${color}, ${colorVar[pipeline[i + 1].accent]})`,
+                  background: `linear-gradient(90deg, ${color}, ${colorVar[steps[i + 1].accent]})`,
                   opacity: 0.55,
                 }}
               />
