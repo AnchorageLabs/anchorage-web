@@ -5,6 +5,7 @@ import {
   ArrowDownToLine,
   ArrowLeft,
   ArrowUpFromLine,
+  BookOpenCheck,
   BrainCircuit,
   Check,
   CircleCheck,
@@ -39,6 +40,7 @@ const toc = [
   { id: "query", label: "Index & query" },
   { id: "push", label: "Push your changes" },
   { id: "mcp", label: "Agent plugins (MCP)" },
+  { id: "logbook", label: "Logbook — shared repo memory" },
   { id: "verify", label: "Verification" },
   { id: "skill", label: "The Anchorage Skill" },
   { id: "llm", label: "Bring your own LLM" },
@@ -76,6 +78,7 @@ const stepIcons: Record<string, LucideIcon> = {
   query: Search,
   push: ArrowUpFromLine,
   mcp: Plug,
+  logbook: BookOpenCheck,
   verify: CircleCheck,
   skill: Sparkles,
   llm: BrainCircuit,
@@ -436,7 +439,38 @@ export default function CartographerSetup() {
           </Step>
 
           {/* 7 */}
-          <Step n={7} id="verify" title="One-command verification">
+          <Step n={7} id="logbook" title="Logbook — teach it once, every agent knows it">
+            <p>
+              Repo knowledge usually gets re-taught to every agent separately. <strong>Logbook</strong> is the
+              shared, reviewed alternative: any agent <strong>proposes</strong> an observation (&ldquo;this boot
+              command works&rdquo;, &ldquo;this test is flaky&rdquo;), a human <strong>promotes</strong> it — exactly
+              like a pull request — and <C>logbook compile</C> renders accepted canon into the context files agents
+              actually read (<C>CLAUDE.md</C>, <C>AGENTS.md</C>, <C>.github/copilot-instructions.md</C>,{" "}
+              <C>GEMINI.md</C>, <C>.cursor/rules/logbook.mdc</C>):
+            </p>
+            <CodeBlock
+              code={"cartographer observe cmd:boot \"make dev boots api+web on :3001\" --kind=boot-command\ncartographer observations --accept=o0230bc1fcd72 --by=<reviewer>\ncartographer logbook compile         # accepted canon -> every agent's context file"}
+            />
+            <p>
+              Agents connected over MCP propose without shelling out (<C>logbook_propose</C> /{" "}
+              <C>logbook_list</C>); provenance comes from the client&rsquo;s identity (set{" "}
+              <C>CARTOGRAPHER_AGENT=&lt;agent-name&gt;</C> once), never from tool arguments — and promotion is{" "}
+              <strong>never</strong> exposed over MCP: review stays a human act on the committed{" "}
+              <C>.anchorage/observations.ndjson</C> diff. A GitHub Action (
+              <C>AnchorageLabs/anchorage-cartographer/action@v0</C>) fails PRs whose compiled blocks are stale and
+              opens an auto-PR with the recompile after merges. Full spec:{" "}
+              <a
+                href="https://github.com/AnchorageLabs/anchorage-cartographer/blob/main/docs/logbook.md"
+                className="text-[var(--cartographer)] underline decoration-[var(--border)] underline-offset-4 hover:decoration-current"
+              >
+                docs/logbook.md
+              </a>
+              .
+            </p>
+          </Step>
+
+          {/* 8 */}
+          <Step n={8} id="verify" title="One-command verification">
             <CodeBlock code="cartographer status --json   # with ANCHORAGE_API_TOKEN exported" />
             <p>
               Healthy output has <C>&quot;fresh&quot;: true</C> (tree vs index) <strong>and</strong> a{" "}
@@ -445,8 +479,8 @@ export default function CartographerSetup() {
             </p>
           </Step>
 
-          {/* 8 */}
-          <Step n={8} id="skill" title="Give your agents the Anchorage Skill">
+          {/* 9 */}
+          <Step n={9} id="skill" title="Give your agents the Anchorage Skill">
             <p>
               Installing the plugin gives agents the tools; the <strong>skill</strong> makes them use the graph
               instead of grepping. Paste the contents of <C>anchorage-agent-skill.md</C> into each agent&rsquo;s
@@ -483,8 +517,8 @@ export default function CartographerSetup() {
             </p>
           </Step>
 
-          {/* 9 */}
-          <Step n={9} id="llm" title="Bring your own LLM (optional)">
+          {/* 10 */}
+          <Step n={10} id="llm" title="Bring your own LLM (optional)">
             <p>
               Core queries are zero-token. Two optional commands call a model: <C>cartographer narrate</C>{" "}
               (plain-language repo summary) and <C>cartographer map --llm</C> (architecture claims). Configure your own
@@ -495,8 +529,8 @@ export default function CartographerSetup() {
             />
           </Step>
 
-          {/* 10 */}
-          <Step n={10} id="troubleshooting" title="Cheat sheet & troubleshooting">
+          {/* 11 */}
+          <Step n={11} id="troubleshooting" title="Cheat sheet & troubleshooting">
             <p>
               <strong className="text-[var(--ink)]">Daily:</strong> <C>pull</C> → work (<C>impact</C> / <C>refs</C> /{" "}
               <C>tests-for</C>, agent tools) → <C>push</C>. Keep <C>cartographer watch</C> running during long sessions.
